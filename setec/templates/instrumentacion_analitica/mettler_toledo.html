@@ -1,0 +1,275 @@
+﻿{% extends "base.html" %}
+{% block title %}Mettler Toledo – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/logo-mettler-transparent.png') }}" alt="Mettler Toledo" class="brand-logo-hero" />
+  <h1>Precisión y Confiabilidad en Instrumentación Analítica</h1>
+  <p>Líder mundial en soluciones de pesaje y análisis para laboratorios e industrias reguladas.</p>
+</div>
+
+<!-- TABS DE NAVEGACIÓN -->
+<section style="background:#f5f5f5;padding:1.2rem 1.5rem;">
+  <div class="container">
+    <a href="{{ url_for('instrumentacion_analitica') }}" class="back-link"><i class="fa fa-arrow-left"></i> Volver a Instrumentación Analítica</a>
+    <div class="brand-tabs">
+      <span class="brand-tab active">Pesaje de Laboratorio</span>
+      <span class="brand-tab">Instrumentos Analíticos</span>
+      <span class="brand-tab">Process Analytics</span>
+      <span class="brand-tab">Software LabX®</span>
+      <span class="brand-tab">Buffers y Consumibles</span>
+    </div>
+  </div>
+</section>
+
+<!-- PESAJE DE LABORATORIO -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Pesaje de Laboratorio</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+      <p style="color:#666;margin-top:.5rem;">Las soluciones de pesaje de Mettler Toledo están diseñadas para satisfacer las demandas más exigentes en términos de precisión y repetibilidad.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/balanzas-analiticas.png') }}" alt="Balanzas Analíticas" />
+        <div class="card-body">
+          <h3>Balanzas Analíticas</h3>
+          <p>Legibilidad desde 0,1 mg hasta 0,00001 mg. Capacidades de 2 g a 520 g. Máxima precisión para cualquier aplicación.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/balanza-de-precision.jpeg') }}" alt="Balanzas de Precisión" />
+        <div class="card-body">
+          <h3>Balanzas de Precisión</h3>
+          <p>Legibilidades desde 0,1 mg y capacidades de 52 g hasta 64 kg. Ideales para formulaciones y control de calidad.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/balanzas-de-humedad.jpeg') }}" alt="Balanzas de Humedad" />
+        <div class="card-body">
+          <h3>Balanzas de Humedad</h3>
+          <p>Determinan el contenido de humedad de forma rápida, precisa y reproducible. Resoluciones desde 0,001 %MC.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/xp64003l_l.jpg') }}" alt="Comparadores de Masa" />
+        <div class="card-body">
+          <h3>Comparadores de Masa</h3>
+          <p>Para calibración y verificación de pesas. Resoluciones desde 0,1 µg y capacidades hasta 6000 kg.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/original-1.webp') }}" alt="Masas" />
+        <div class="card-body">
+          <h3>Masas</h3>
+          <p>Pesas patrón OIML o ASTM certificadas desde 50 microgramos hasta 5 toneladas, clases M1 a E0.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/cq5dam-web-1280x1280.png') }}" alt="Accesorios antiestáticos" />
+        <div class="card-body">
+          <h3>Accesorios antiestáticos</h3>
+          <p>Soluciones antiestáticas y accesorios para eliminar las interferencias provocadas por la electricidad estática.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUMENTOS ANALÍTICOS -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Instrumentos Analíticos</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/30671555.jpg') }}" alt="pH y Conductividad" />
+        <div class="card-body">
+          <h3>Medición de pH y Conductividad</h3>
+          <p>Mediciones exactas del pH, conductividad, ORP/Redox y oxígeno disuelto para laboratorio y campo.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/valoradores.jpg') }}" alt="Tituladores" />
+        <div class="card-body">
+          <h3>Tituladores</h3>
+          <p>Tituladores automatizados para análisis ácido-base, potenciométricos, Redox. Incluye Karl Fischer y sistemas automáticos.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>Densímetros</h3>
+          <p>Densímetros de alta precisión con resolución de 6, 5 o 4 decimales. También modelos portátiles para campo.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/Espectrofotometria.jpg') }}" alt="Espectrofotometría UV/VIS" />
+        <div class="card-body">
+          <h3>Espectrofotometría UV/VIS</h3>
+          <p>Análisis óptico rápido y preciso en rangos UV y visible. Interfaz intuitiva sin necesidad de computadora adicional.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>Refractómetros / Medidores de Brix</h3>
+          <p>Precisión desde 3 a 5 decimales. Disponibles en versiones de sobremesa y portátiles para laboratorio y campo.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/punto-de-fusion-y-goteo.jpg') }}" alt="Punto de Fusión" />
+        <div class="card-body">
+          <h3>Punto de Fusión y Goteo</h3>
+          <p>Equipos para determinar punto de fusión, ebullición, punto de nube y deslizamiento con métodos estandarizados.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/analisis-termico.jpg') }}" alt="Análisis Térmico" />
+        <div class="card-body">
+          <h3>Análisis Térmico</h3>
+          <p>DSC, TGA y TMA para caracterización de materiales y estudios de estabilidad térmica.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS ANALYTICS -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Process Analytics</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+      <p style="color:#666;margin-top:.5rem;">Soluciones en línea para el monitoreo continuo de parámetros críticos en entornos industriales.</p>
+    </div>
+    <div class="product-layout">
+      <div class="product-info">
+        <h3>Parámetros Medidos</h3>
+        <p style="color:#666;margin-bottom:1rem;">En nuestra línea de Mettler Toledo en el área de procesos industriales ofrecemos equipo especializado para medir en línea variables como:</p>
+        <ul>
+          <li>Carbono Orgánico Total – TOC</li>
+          <li>Conductividad, pH, Redox</li>
+          <li>CO₂, Oxígeno Disuelto, Turbidez</li>
+          <li>Ozono, Analizadores de Sodio y Sílice</li>
+          <li>Analizadores de Cloruro y Sulfato</li>
+          <li>Analizadores de Gases-TDL</li>
+          <li>Cloro Libre, Total y Residual</li>
+        </ul>
+        <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn btn-primary" style="margin-top:1rem;">Contáctenos</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/ism-1024x577.png') }}" alt="ISM Technology" class="product-image" />
+      </div>
+    </div>
+    <div style="margin-top:3rem;">
+      <h3 style="font-size:1.2rem;margin-bottom:1rem;">Tecnología ISM® (Intelligent Sensor Management)</h3>
+      <p style="color:#666;margin-bottom:1.5rem;">La tecnología ISM® de METTLER TOLEDO revoluciona el análisis de procesos al integrar sensores digitales con funciones avanzadas de diagnóstico predictivo, almacenamiento de datos y calibración fuera de línea.</p>
+      <h3 style="font-size:1.2rem;margin-bottom:.5rem;">Transmisores Multiparamétricos</h3>
+      <p style="color:#666;margin-bottom:1rem;">Hasta 1, 2 o 4 canales de medición simultánea. Compatibles con HART, Modbus, Profibus y Ethernet/IP. Protección IP65 y opciones ATEX.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;">
+        <span class="industria-tag">Industria farmacéutica</span>
+        <span class="industria-tag">Industria biotecnológica</span>
+        <span class="industria-tag">Industria alimentaria</span>
+        <span class="industria-tag">Tratamiento de aguas</span>
+        <span class="industria-tag">Control de calidad</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOFTWARE LabX -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Software LabX®</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+      <p style="color:#666;margin-top:.5rem;">Plataforma de software que centraliza la gestión de datos de los instrumentos de Mettler Toledo.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>Integridad de Datos</h3>
+        <p>Cumplimiento con la FDA 21 CFR Parte 11, garantizando trazabilidad y seguridad en la gestión de la información.</p>
+      </div>
+      <div class="feature">
+        <h3>Automatización de Flujos de Trabajo</h3>
+        <p>Desde la preparación de muestras hasta la generación de informes. Diseño flexible y escalable para laboratorios de cualquier tamaño.</p>
+      </div>
+      <div class="feature">
+        <h3>Conectividad</h3>
+        <p>Integración con sistemas LIMS y ERP, facilitando la transferencia de datos y la toma de decisiones en tiempo real.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn btn-primary">Contáctenos</a>
+    </div>
+  </div>
+</section>
+
+<!-- BUFFERS Y CONSUMIBLES -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Buffers, Electrodos y Consumibles</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-body">
+          <h3>Buffers de pH y conductividad</h3>
+          <p>Línea completa de buffers y estándares certificados. Soluciones desde pH 1.00 hasta pH 13.00. Certificados bajo ISO 17025 e ISO 17034.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/51338010.jpg') }}" alt="Patrones de calibración" />
+        <div class="card-body">
+          <h3>Patrones de calibración</h3>
+          <p>Patrones para densidad, alcohol, Brix, índice de refracción, punto de fusión, viscosidad y más. Certificados ISO 17025.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/cq5dam-web-320x320.webp') }}" alt="Sensores ISE" />
+        <div class="card-body">
+          <h3>Electrodos ISE</h3>
+          <p>Soluciones para electrodos selectivos de iones. Estándares de calibración, ajustadores de fuerza iónica y electrolitos.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/cq5dam-web-320x320-2.webp') }}" alt="Sensores pH" />
+        <div class="card-body">
+          <h3>Sensores de pH</h3>
+          <p>Para muestras acuosas, no acuosas, biológicas, químicos agresivos, viscosas y semisólidas. Alta estabilidad con ISM®.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/cq5dam-web-320x320-3.webp') }}" alt="Consumibles" />
+        <div class="card-body">
+          <h3>Consumibles Generales</h3>
+          <p>Platillos de aluminio, pinzas para masas, jeringas, puntas de pipetas, papel térmico, tubos capilares, termómetros y más.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

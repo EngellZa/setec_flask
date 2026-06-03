@@ -1,0 +1,53 @@
+﻿{% extends "base.html" %}
+{% block title %}Recubrimientos – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <img src="{{ url_for('static', filename='img/recubrimientos/carboline-logo.png') }}" alt="Carboline" class="brand-logo-hero" />
+  <h1>Recubrimientos</h1>
+  <p>Recubrimientos industriales que garantizan calidad, durabilidad y protección contra corrosión, abrasión y desgaste.</p>
+</div>
+
+<!-- CARBOLINE THINNER -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h3>Montaje rígido de hasta 27 kilos controlador básico 4 fórmulas</h3>
+        <h2>Carboline Thinner 2 – 5L</h2>
+        <ul>
+          <li><strong>Disolvente de alta calidad:</strong> Formulado específicamente como disolvente para la industria de pinturas y recubrimientos.</li>
+          <li><strong>Versatilidad de uso:</strong> Adecuado para diluir una amplia variedad de pinturas y recubrimientos, facilitando su aplicación y manejo.</li>
+          <li><strong>Mezcla eficiente:</strong> Permite una mezcla efectiva con productos base, asegurando una consistencia adecuada para la aplicación.</li>
+        </ul>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/recubrimientos/carboline-thermaline-4700-aluminium.webp') }}" alt="Carboline Thinner" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARACTERÍSTICAS -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Características del producto</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature"><h3>Mezcla y dilución eficiente</h3><p>Garantiza una consistencia óptima para todo tipo de aplicaciones.</p></div>
+      <div class="feature"><h3>Facilita la aplicación</h3><p>Reduce la viscosidad para una aplicación más fluida y uniforme.</p></div>
+      <div class="feature"><h3>Tiempo de secado</h3><p>Optimiza el tiempo de secado de pinturas y recubrimientos industriales.</p></div>
+      <div class="feature"><h3>Limpieza de equipos</h3><p>Ideal para la limpieza de equipos de aplicación y herramientas.</p></div>
+      <div class="feature"><h3>Reducción de viscosidad</h3><p>Ajuste preciso de la viscosidad para cada tipo de recubrimiento.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

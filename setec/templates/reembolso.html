@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Políticas de Reembolso – Setec{% endblock %}
+{% block content %}
+<div class="legal-page">
+  <h1>Políticas de Reembolso</h1>
+  <p>En SETEC nos esforzamos por garantizar la satisfacción de nuestros clientes. Por favor lee detenidamente nuestra política de reembolso antes de realizar una compra.</p>
+  <h2>Condiciones para reembolso</h2>
+  <ul>
+    <li>Los productos pueden ser devueltos dentro de los <strong>30 días</strong> posteriores a la fecha de compra.</li>
+    <li>El producto debe encontrarse en su estado original, sin uso y con todo el embalaje original.</li>
+    <li>Debe presentarse el comprobante de compra original.</li>
+  </ul>
+  <h2>Proceso de reembolso</h2>
+  <ul>
+    <li>Contáctenos a través de nuestro formulario de contacto o por teléfono para iniciar el proceso.</li>
+    <li>El reembolso se procesará dentro de los <strong>10 días hábiles</strong> siguientes a la recepción del producto devuelto.</li>
+    <li>El reembolso se realizará por el mismo método de pago utilizado en la compra original.</li>
+  </ul>
+  <h2>Excepciones</h2>
+  <ul>
+    <li>Productos personalizados o fabricados bajo pedido especial no aplican para reembolso.</li>
+    <li>Productos con daños causados por el cliente o mal uso no serán reembolsados.</li>
+    <li>Gastos de envío no son reembolsables, a menos que el error sea nuestro.</li>
+  </ul>
+  <h2>Contacto</h2>
+  <p>Para iniciar un proceso de reembolso o si tienes alguna duda, por favor <a href="{{ url_for('contacto') }}" style="color:#c8a94a;">contáctanos</a>.</p>
+</div>
+{% endblock %}

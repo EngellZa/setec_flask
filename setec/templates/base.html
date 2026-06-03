@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>{% block title %}Setec – Servicios Técnicos Profesionales{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/logo-setec.svg') }}" />
+  <!-- Google Fonts – Poppins (body) + Space Grotesk (h1) + Raleway (Elementor) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B"
+        crossorigin="anonymous" />
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ url_for('index') }}" class="logo">
+      <img src="{{ url_for('static', filename='img/logo-setec.png') }}"
+           onerror="this.onerror=null; this.src='{{ url_for('static', filename='img/logo-setec.png') }}';"
+           alt="SETEC Logo" />
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('sobre_nosotros') }}">Sobre Nosotros</a></li>
+        <li class="has-dropdown">
+          <a href="#">Productos y Servicios <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="{{ url_for('lavanderia_industrial') }}">Lavandería Industrial</a></li>
+            <li><a href="{{ url_for('trasiego_de_fluidos') }}">Trasiego de fluidos</a></li>
+            <li><a href="{{ url_for('sistemas_vapor') }}">Sistemas de Vapor y Agua Caliente</a></li>
+            <li class="has-dropdown">
+              <a href="{{ url_for('instrumentacion_analitica') }}">Instrumentación Analítica <i class="fa fa-chevron-right fa-xs"></i></a>
+              <ul class="dropdown dropdown-right">
+                <li><a href="{{ url_for('mettler_toledo') }}">Mettler Toledo</a></li>
+                <li><a href="{{ url_for('memmert') }}">Memmert</a></li>
+                <li><a href="{{ url_for('scilogex') }}">Scilogex</a></li>
+                <li><a href="{{ url_for('otras_marcas') }}">Otras Marcas</a></li>
+              </ul>
+            </li>
+            <li><a href="{{ url_for('recubrimientos') }}">Recubrimientos</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+      </ul>
+    </nav>
+
+    <a href="{{ url_for('contacto') }}" class="btn-contacto">Contáctenos</a>
+  </div>
+</header>
+
+<!-- ===== CONTENIDO ===== -->
+<main id="main">
+  {% block content %}{% endblock %}
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Productos y Servicios</h4>
+      <ul>
+        <li><a href="{{ url_for('lavanderia_industrial') }}">Lavandería Industrial</a></li>
+        <li><a href="{{ url_for('trasiego_de_fluidos') }}">Trasiego De Fluidos</a></li>
+        <li><a href="{{ url_for('sistemas_vapor') }}">Sistema de Vapor y Agua Caliente</a></li>
+        <li><a href="{{ url_for('instrumentacion_analitica') }}">Instrumentación Analítica</a></li>
+        <li><a href="{{ url_for('recubrimientos') }}">Recubrimientos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Compañía</h4>
+      <ul>
+        <li><a href="{{ url_for('terminos') }}">Términos y Condiciones</a></li>
+        <li><a href="{{ url_for('privacidad') }}">Políticas de Privacidad</a></li>
+        <li><a href="{{ url_for('cookies') }}">Cookies</a></li>
+        <li><a href="{{ url_for('reembolso') }}">Políticas de Reembolso</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Enlaces Útiles</h4>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        <li><a href="{{ url_for('sobre_nosotros') }}">Sobre Nosotros</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Lo último de nuestro blog</h4>
+      <p>SETEC es la institución líder en Costa Rica en la formación y capacitación profesional.</p>
+      <a href="{{ url_for('contacto') }}" class="btn-footer">Contactar</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>2025 SETEC COSTA RICA. Todos los derechos reservados.
+      <a href="{{ url_for('terminos') }}">condiciones de uso</a> |
+      <a href="{{ url_for('privacidad') }}">política de privacidad</a> |
+      <a href="{{ url_for('cookies') }}">cookies</a>
+    </p>
+    <p>150m Norte de la entrada principal del Ferrocarril al Pacifico. Llámenos al <strong>+506 2257-6464</strong> (7:45am – 5:15pm UTC).</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/SetecCostaRica" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/company/seteccostarica/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=70100618" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

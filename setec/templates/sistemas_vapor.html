@@ -1,0 +1,121 @@
+﻿{% extends "base.html" %}
+{% block title %}Sistemas de Vapor y Agua Caliente – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>Sistema de Vapor y Agua Caliente</h1>
+  <p>Soluciones para gestión de vapor y agua caliente en aplicaciones industriales y comerciales.</p>
+</div>
+
+<!-- MARCAS -->
+<section style="background:#f5f5f5;padding:1.5rem;">
+  <div class="brands-row">
+    <img src="{{ url_for('static', filename='img/logos/ebaralog.svg') }}" alt="Ebara" style="height:50px;" />
+    <img src="{{ url_for('static', filename='img/logos/tuthill.svg') }}" alt="Tuthill" style="height:40px;" />
+    <img src="{{ url_for('static', filename='img/logos/fill.svg') }}" alt="Fill" style="height:40px;" />
+  </div>
+</section>
+
+<!-- P3S 300 SERIES -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h3>P3S 300 SERIES PRESSURE GAUGE</h3>
+        <h2>P3S 300 SERIES PRESSURE GAUGE</h2>
+        <ul>
+          <li>Medidor de caja de aluminio de alta precisión y gran resistencia.</li>
+          <li>±0,5% de precisión.</li>
+          <li>Internos de latón o acero inoxidable.</li>
+          <li>Esfera grande y fácil de leer.</li>
+          <li>StabiliZR®️ movimiento amortiguado disponible en tamaño de esfera de 4,5″.</li>
+          <li>Cumple la norma ASME B40.100.</li>
+          <li>Registro CRN — 5 años de garantía.</li>
+        </ul>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/sistemas_vapor/Lead-Free_group-1024x543.jpg') }}" alt="P3S 300" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUEMADOR SERIE SG -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout reverse">
+      <div class="product-info">
+        <h3>Quemadores de calderas comerciales e industriales ligeros</h3>
+        <h2>Quemador de gas exclusivo de la serie SG</h2>
+        <p>Nuestros quemadores de emisiones estándar para aplicaciones comerciales e industriales ligeras incluyen opciones de combustible único, combustible múltiple y alta eficiencia/alta reducción para satisfacer las necesidades de su aplicación.</p>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/sistemas_vapor/main-standard-emission-burners.jpg') }}" alt="Quemador SG" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUEMADORES BAJAS EMISIONES -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h2>Quemadores de bajas emisiones</h2>
+        <p>Los quemadores de bajas emisiones de Webster para aplicaciones comerciales e industriales ligeras abarcan opciones de combustible múltiple y alta reducción de emisiones para satisfacer sus necesidades de aplicaciones de bajo NOx.</p>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/sistemas_vapor/main-low-emission-burners.jpg') }}" alt="Quemadores bajas emisiones" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUEMADORES ULTRA BAJAS EMISIONES -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout reverse">
+      <div class="product-info">
+        <h2>Quemadores de emisiones ultrabajas</h2>
+        <p>Los quemadores de emisiones ultra bajas de Webster para aplicaciones comerciales e industriales ligeras incluyen el JBFX, que funciona solo con gas, y el quemador SC de combustión de superficie que puede funcionar con gas o gas/petróleo. Ambos quemadores están diseñados para satisfacer sus necesidades con niveles ultra bajos de NOx.</p>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/sistemas_vapor/main-ultra-low-emission-burners.jpg') }}" alt="Ultra bajas emisiones" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTERRUPTORES -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Interruptores Industriales</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>Interruptores básicos</h3>
+        <p>Interruptores altamente confiables y resistentes, los básicos incluyen miniatura, subminiatura y grande. Versiones especiales, selladas y sin sellar.</p>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Cotizar ahora</a>
+      </div>
+      <div class="feature">
+        <h3>Finales de carrera</h3>
+        <p>Una cartera de interruptores de límite amplia y completa, que incluye interruptores globales, de servicio pesado, en miniatura, de uso general, para ubicaciones peligrosas y sellados.</p>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Cotizar ahora</a>
+      </div>
+      <div class="feature">
+        <h3>Interruptores de límite de seguridad</h3>
+        <p>Para aplicaciones de seguridad críticas, los interruptores incluyen enclavamientos operados con llave, tiradores de cable, montajes con bisagras, límites y opciones sin contacto.</p>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Cotizar ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

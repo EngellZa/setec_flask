@@ -1,0 +1,158 @@
+﻿{% extends "base.html" %}
+{% block title %}Sobre Nosotros – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>Servimos a la industria desde 1954</h1>
+  <p>CULTURA SETEC</p>
+</div>
+
+<!-- QUIÉNES SOMOS -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>¿Quiénes somos?</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+    </div>
+    <div class="about-text-section">
+      <div>
+        <p style="color:#666;margin-bottom:1rem;">
+          En Servicios Técnicos S.A., valoramos la contribución individual de cada uno de nuestros colaboradores al crecimiento y éxito de nuestros clientes. Estamos comprometidos a ser parte de su equipo y aportar un valor agregado que no solo enriquezca su equipo, sino que también les llene de orgullo.
+        </p>
+        <p style="color:#666;margin-bottom:1rem;">
+          Servicios Técnicos S.A, se dedica a la comercialización de bienes y servicios para la industria e Instituciones Estatales, fue fundada en 1954.
+        </p>
+        <p style="color:#666;">
+          Inicia su exitosa carrera gracias a la emprendedora labor de un joven llamado Chester March Patterson, extensamente experimentado en los Estados Unidos y graduado de Ingeniero de M.I.T. quien se forjó el objetivo de desarrollar negocios en Costa Rica.
+        </p>
+      </div>
+      <img src="{{ url_for('static', filename='img/sobre_nosotros/setec-nosotros.jpg') }}" alt="SETEC Nosotros" />
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section style="background:#f5f5f5;padding:2rem 1.5rem;">
+  <div class="container">
+    <div class="gallery-grid">
+      <a href="{{ url_for('static', filename='img/sobre_nosotros/galeria-4.jpg') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/sobre_nosotros/galeria-4.jpg') }}" alt="Galería 1" />
+      </a>
+      <a href="{{ url_for('static', filename='img/sobre_nosotros/galeria-3.jpg') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/sobre_nosotros/galeria-3.jpg') }}" alt="Galería 2" />
+      </a>
+      <a href="{{ url_for('static', filename='img/sobre_nosotros/Galeria-2.jpg') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/sobre_nosotros/Galeria-2.jpg') }}" alt="Galería 3" />
+      </a>
+      <a href="{{ url_for('static', filename='img/sobre_nosotros/galeria-1.jpg') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/sobre_nosotros/galeria-1.jpg') }}" alt="Galería 4" />
+      </a>
+      <a href="{{ url_for('static', filename='img/sobre_nosotros/2-milnor-scaled.jpg') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/sobre_nosotros/2-milnor-scaled.jpg') }}" alt="Galería 5" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO + ESLOGAN -->
+<section style="background:#fff;text-align:center;padding:3rem 1.5rem;">
+  <div class="container">
+    <img src="{{ url_for('static', filename='img/sobre_nosotros/logo-setec-1024x328.png') }}" alt="Logo SETEC" style="max-width:380px;margin:0 auto 1.5rem;" />
+    <h2 style="font-size:1.4rem;max-width:700px;margin:0 auto;color:#333;">
+      Líder en el desarrollo de proyectos y equipamiento de lavandería industrial, equipos de calidad, modernos e innovadores.
+    </h2>
+  </div>
+</section>
+
+<!-- MISIÓN Y VISIÓN -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="mision-vision">
+      <div class="mv-card">
+        <h2>Nuestra Visión</h2>
+        <p style="color:#666;">
+          Vamos a crear una cultura de trabajo que comienza a gestarse ante las necesidades de un mercado cambiante, forjaremos un futuro sólido, avanzando, ascendiendo y expandiendo nuestras fronteras a Centroamérica, hasta convertirnos en la empresa líder, reflexionando sobre nuestras experiencias pasadas y comprendiéndolas.
+        </p>
+      </div>
+      <div class="mv-card">
+        <h2>Nuestra Misión</h2>
+        <p style="color:#666;">
+          Nuestra empresa a lo largo de sus años se ha enfocado en asesorar y guiar a nuestros clientes, desarrollando relaciones de respeto y profesionalismo, innovando y brindando productos de la más alta calidad, basados en un fuerte compromiso, buscando un balance entre los intereses económicos y el impacto positivo entre la sociedad y el medio ambiente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nuestros servicios</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Lavandería Industrial</h3>
+        <p>Mantenimiento y reparación especializada de equipos de lavandería comercial e industrial.</p>
+        <a href="{{ url_for('lavanderia_industrial') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Ver más</a>
+      </div>
+      <div class="service-card">
+        <h3>Trasiego de fluidos</h3>
+        <p>Instalación y mantenimiento de sistemas de bombeo y transferencia de líquidos industriales.</p>
+        <a href="{{ url_for('trasiego_de_fluidos') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Ver más</a>
+      </div>
+      <div class="service-card">
+        <h3>Sistemas de Vapor y Agua Caliente</h3>
+        <p>Servicios técnicos para calderas, generadores de vapor y sistemas de refrigeración industrial.</p>
+        <a href="{{ url_for('sistemas_vapor') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Ver más</a>
+      </div>
+      <div class="service-card">
+        <h3>Instrumentación Analítica</h3>
+        <p>Instalación, calibración y mantenimiento de equipos de medición y control de procesos.</p>
+        <a href="{{ url_for('instrumentacion_analitica') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Ver más</a>
+      </div>
+      <div class="service-card">
+        <h3>Recubrimientos</h3>
+        <p>Aplicación profesional de recubrimientos protectores y anticorrosivos para equipos industriales.</p>
+        <a href="{{ url_for('recubrimientos') }}" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Ver más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Testimonios clientes</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <blockquote>"A testimonial from a client who benefited from your product or service. Testimonials can be a highly effective way of establishing credibility and increasing your company's reputation."</blockquote>
+        <div style="display:flex;align-items:center;gap:.8rem;">
+          <img src="{{ url_for('static', filename='img/sobre_nosotros/cropped-setec-logo.png') }}" alt="Cliente" style="width:48px;height:48px;border-radius:50%;object-fit:contain;" />
+          <cite>Client Name</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <blockquote>"A testimonial from a client who benefited from your product or service. Testimonials can be a highly effective way of establishing credibility and increasing your company's reputation."</blockquote>
+        <div style="display:flex;align-items:center;gap:.8rem;">
+          <img src="{{ url_for('static', filename='img/sobre_nosotros/cropped-setec-logo.png') }}" alt="Cliente" style="width:48px;height:48px;border-radius:50%;object-fit:contain;" />
+          <cite>Client Name</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <blockquote>"A testimonial from a client who benefited from your product or service. Testimonials can be a highly effective way of establishing credibility and increasing your company's reputation."</blockquote>
+        <div style="display:flex;align-items:center;gap:.8rem;">
+          <img src="{{ url_for('static', filename='img/sobre_nosotros/cropped-setec-logo.png') }}" alt="Cliente" style="width:48px;height:48px;border-radius:50%;object-fit:contain;" />
+          <cite>Client Name</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+﻿{% extends "base.html" %}
+{% block title %}Contacto – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light" style="padding:3rem 1.5rem;">
+  
+  <h1>Hablemos</h1>
+  <p>Estamos aquí para ayudarte. Completa el formulario y nuestro equipo te responderá lo antes posible.</p>
+</div>
+
+<section style="background:#f5f5f5;padding:4rem 1.5rem;">
+  <div class="contact-section">
+
+    <!-- FORMULARIO -->
+    <div class="contact-form">
+      <h2>Envíanos un mensaje</h2>
+      {% if sent %}
+      <div class="alert alert-success">
+        <i class="fa fa-check-circle"></i> ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+      </div>
+      {% elif error %}
+      <div class="alert alert-error">
+        <i class="fa fa-exclamation-circle"></i> Ocurrió un error al enviar el mensaje. Por favor intente de nuevo o escríbanos directamente a <a href="mailto:info@setec-cr.com">info@setec-cr.com</a>.
+      </div>
+      {% endif %}
+      <form method="POST" action="{{ url_for('contacto') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <!-- Honeypot: oculto para humanos, bots lo llenan -->
+        <div style="display:none;" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre Completo *</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com" />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+506 XXXX-XXXX" />
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" />
+        </div>
+        <div class="form-group">
+          <label for="asunto">Asunto *</label>
+          <input type="text" id="asunto" name="asunto" required placeholder="¿En qué podemos ayudarte?" />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" required placeholder="Describe tu consulta o proyecto..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar mensaje</button>
+      </form>
+    </div>
+
+    <!-- INFO DE CONTACTO -->
+    <div class="contact-info">
+      <h3>Ponte en contacto con nosotros</h3>
+      <div class="info-item">
+        <i class="fa fa-phone"></i>
+        <div>
+          <strong>Teléfonos</strong>
+          <p>2257-6464 | 2222-1111</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa fa-envelope"></i>
+        <div>
+          <strong>Correo</strong>
+          <p>info@setec-cr.com</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa fa-clock"></i>
+        <div>
+          <strong>Horarios</strong>
+          <p>Lunes – Jueves: 7:45AM – 5:15 PM<br />
+             Viernes: 7:45AM – 5:00PM<br />
+             Sábado – Domingo: Cerrado</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa fa-map-marker-alt"></i>
+        <div>
+          <strong>Dirección</strong>
+          <p>150 metros norte de la entrada principal a la Estación del Ferrocarril al Pacifico, entre Av.16 y 18.</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fab fa-whatsapp" style="color:#25d366;"></i>
+        <div>
+          <strong>WhatsApp</strong>
+          <p><a href="https://wa.link/omdjxs" target="_blank" rel="noopener noreferrer" style="color:#25d366;">Enviar mensaje por WhatsApp</a></p>
+        </div>
+      </div>
+
+      <!-- MAPA -->
+      <div class="map-container" style="margin-top:1.5rem;">
+        <iframe
+          src="https://maps.google.com/maps?q=EQUIGAS%20COSTA%20RICA&t=m&z=17&output=embed&iwloc=near"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

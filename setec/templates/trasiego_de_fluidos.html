@@ -1,0 +1,94 @@
+﻿{% extends "base.html" %}
+{% block title %}Trasiego de Fluidos – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>Trasiego de Fluidos</h1>
+  <p>Sistemas para la transferencia segura y precisa de líquidos en industrias alimentarias, farmacéuticas y químicas.</p>
+</div>
+
+<!-- MARCAS -->
+<section style="background:#f5f5f5;padding:1.5rem;">
+  <div class="brands-row">
+    <img src="{{ url_for('static', filename='img/logos/ebaralog.svg') }}" alt="Ebara" style="height:50px;" />
+    <img src="{{ url_for('static', filename='img/logos/tuthill.svg') }}" alt="Tuthill" style="height:40px;" />
+    <img src="{{ url_for('static', filename='img/logos/fill.svg') }}" alt="Fill" style="height:40px;" />
+  </div>
+</section>
+
+<!-- EVMS SERIES -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h3>EVMS SERIES SURFACE</h3>
+        <h2>EVMS SERIES</h2>
+        <ul>
+          <li>El impulsor de primera etapa de bajo NPSH reduce significativamente los requisitos de NPSH.</li>
+          <li>Tamaños de motor NEMA estándar.</li>
+          <li>El impulsor de bajo empuje axial prolonga la vida útil de los cojinetes del motor.</li>
+          <li>El orificio de purga de aire de la tapa de la carcasa permite una purga adecuada para evitar el atrapamiento de aire.</li>
+          <li>El orificio de llenado permite instalar sensores, manómetros y otros dispositivos de medición.</li>
+          <li>El anillo de revestimiento es un diseño flotante autoalineable para evitar el hinchamiento a altas temperaturas.</li>
+        </ul>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/trasiego_de_fluidos/EVM-Family-1024x682.png') }}" alt="EVMS Series" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DSC4 SUBMERSIBLE -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout reverse">
+      <div class="product-info">
+        <h3>DSC4 SUBMERSIBLE</h3>
+        <h2>DSC4</h2>
+        <ul>
+          <li>El sistema estanco de entrada de cables con protección redundante garantiza un funcionamiento seguro y protege contra las fugas de agua.</li>
+          <li>El tablero de terminales facilita la conexión de los cables.</li>
+          <li>Motor de diseño compacto, alta eficiencia y gran resistencia con detector térmico para cada fase del devanado.</li>
+          <li>Homologado para servicio inversor y aprobado por FM.</li>
+        </ul>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/trasiego_de_fluidos/DSC4_1-1024x683.jpg') }}" alt="DSC4" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IFW/IFS (OH1) -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h3>IFW/IFS (OH1) CUSTOM PUMPS</h3>
+        <h2>IFW/IFS (OH1)</h2>
+        <ul>
+          <li><strong>Tipo:</strong> OH1</li>
+          <li>Soporte de pie y diseño resistente.</li>
+          <li>Carcasa trasera extraíble.</li>
+          <li>Cumplimiento total de las especificaciones ISO 2858.</li>
+          <li>Todos los componentes diseñados para máxima intercambiabilidad de piezas.</li>
+          <li>Flexibilidad de diseño para una amplia gama de líquidos.</li>
+          <li>Todos los tamaños en stock para el último envío.</li>
+          <li>Bajo NPSH.</li>
+          <li><strong>Carcasa:</strong> hierro fundido / SS304 / SS316 / acero inoxidable dúplex.</li>
+          <li><strong>Impulsor:</strong> Hierro fundido / SS304 / SS316 / Duplex SS.</li>
+        </ul>
+        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ahora</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/trasiego_de_fluidos/IFW-IFS-OH13-1024x683.jpg') }}" alt="IFW/IFS" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

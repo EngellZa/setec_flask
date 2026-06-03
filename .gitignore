@@ -1,0 +1,18 @@
+# Credenciales — NUNCA subir al repositorio
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Entorno virtual
+env/
+venv/
+.venv/
+
+# Editor
+.vscode/
+.idea/
+*.swp

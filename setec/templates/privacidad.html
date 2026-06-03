@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Políticas de Privacidad – Setec{% endblock %}
+{% block content %}
+<div class="legal-page">
+  <h1>Políticas de Privacidad</h1>
+  <p>En SETEC, respetamos tu privacidad y nos comprometemos a proteger la información personal que nos proporcionas. Esta política describe cómo recopilamos, utilizamos y protegemos tu información cuando visitas nuestro sitio web.</p>
+  <h2>1. Información que Recopilamos</h2>
+  <ul>
+    <li><strong>Información de Contacto:</strong> Recopilamos tu nombre, dirección de correo electrónico, número de teléfono y dirección postal cuando creas una cuenta o realizas una compra.</li>
+    <li><strong>Información de Pago:</strong> Cuando realizas una compra, recopilamos la información de pago, como el número de tarjeta y la dirección de facturación.</li>
+    <li><strong>Información de Navegación:</strong> Utilizamos cookies y tecnologías similares para recopilar información sobre tu actividad en nuestro sitio web.</li>
+  </ul>
+  <h2>2. Uso de la Información</h2>
+  <ul>
+    <li>Utilizamos la información para procesar tus pedidos, comunicarnos contigo sobre tu compra y responder a tus consultas.</li>
+    <li>No compartimos tu información personal con terceros, excepto cuando sea necesario para cumplir con tus pedidos o requisitos legales.</li>
+  </ul>
+  <h2>3. Protección de la Información</h2>
+  <ul>
+    <li>Implementamos medidas de seguridad para proteger tu información personal contra accesos no autorizados.</li>
+    <li>Utilizamos una conexión segura (SSL) para proteger la información sensible transmitida en línea.</li>
+  </ul>
+  <h2>4. Cookies</h2>
+  <ul>
+    <li>Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio web.</li>
+    <li>Puedes gestionar las preferencias de cookies a través de la configuración de tu navegador.</li>
+  </ul>
+  <h2>5. Consentimiento</h2>
+  <p>Al utilizar nuestro sitio web y proporcionarnos tu información personal, aceptas nuestra recopilación, uso y divulgación de tu información de acuerdo con esta política de privacidad.</p>
+  <h2>6. Cambios en la Política de Privacidad</h2>
+  <p>Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Te notificaremos cualquier cambio significativo mediante una notificación en nuestro sitio web.</p>
+  <h2>7. Contacto</h2>
+  <p>Si tienes alguna pregunta sobre nuestra política de privacidad, <a href="{{ url_for('contacto') }}" style="color:#c8a94a;">contáctanos</a>.</p>
+</div>
+{% endblock %}

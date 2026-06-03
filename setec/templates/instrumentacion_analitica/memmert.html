@@ -1,0 +1,163 @@
+﻿{% extends "base.html" %}
+{% block title %}Memmert – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/metmert.png') }}" alt="Memmert" class="brand-logo-hero" />
+  <h1>Precisión Térmica para Aplicaciones Científicas e Industriales</h1>
+</div>
+
+<section style="background:#f5f5f5;padding:1.2rem 1.5rem;">
+  <div class="container">
+    <a href="{{ url_for('instrumentacion_analitica') }}" class="back-link"><i class="fa fa-arrow-left"></i> Volver a Instrumentación Analítica</a>
+    <div class="brand-tabs">
+      <span class="brand-tab active">Cámaras Climáticas</span>
+      <span class="brand-tab">Estufas de Calentamiento</span>
+      <span class="brand-tab">Incubadoras</span>
+      <span class="brand-tab">Baños de Agua</span>
+    </div>
+  </div>
+</section>
+
+<!-- CÁMARAS CLIMÁTICAS -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Cámaras Climáticas</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+      <p style="color:#666;margin-top:.5rem;">Las cámaras climáticas de Memmert están diseñadas para simular condiciones ambientales precisas, siendo ideales para ensayos de estabilidad, pruebas de materiales y estudios de envejecimiento.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/csm_ICH110-climate-chamber-open.png') }}" alt="Cámara ICH" />
+        <div class="card-body">
+          <h3>Cámara Climática ICH</h3>
+          <p>Diseñada para pruebas de estabilidad conforme a ICH Q1A. Temperatura –10 °C a +60 °C, humedad 10% a 80% RH. Capacidades 108 a 749 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/csm_HPP110eco_open.webp') }}" alt="HPPeco" />
+        <div class="card-body">
+          <h3>Cámara HPPeco</h3>
+          <p>Pruebas de estabilidad y almacenamiento a largo plazo. +0 °C a +70 °C, 10% a 90% RH. Tecnología Peltier eficiente. 106 a 2140 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-Camara-CTC-TTC.jpg') }}" alt="CTC/TTC" />
+        <div class="card-body">
+          <h3>Cámara CTC/TTC</h3>
+          <p>Pruebas de estrés térmico y envejecimiento. CTC: –42 °C a +190 °C, 10% a 98% RH. TTC: +10 °C a +300 °C. 256 litros, hasta 10 K/min.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTUFAS DE CALENTAMIENTO -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Estufas de Calentamiento</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+      <p style="color:#666;margin-top:.5rem;">Control térmico preciso para aplicaciones de secado, calentamiento y esterilización. Disponible también en versión MED certificada MDR (UE) 2017/745.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-estufa-universal.jpg') }}" alt="Estufa Universal" />
+        <div class="card-body">
+          <h3>Estufa Universal UN/UF</h3>
+          <p>Convección natural (UN) o circulación forzada (UF). +20 °C a +300 °C. Capacidades 32 a 1060 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/csm_UNpa55-paraffin-oven-open.png') }}" alt="Estufa Parafina" />
+        <div class="card-body">
+          <h3>Estufa de Parafina UNpa</h3>
+          <p>Para histología y preparación de tejidos. +20 °C a +80 °C, resolución 0,1 °C. Capacidades 32 a 161 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-estufa-vacio.jpg') }}" alt="Estufa Vacío" />
+        <div class="card-body">
+          <h3>Estufa de Vacío VOcool</h3>
+          <p>Secado delicado de materiales sensibles al calor. Hasta +200 °C con refrigeración activa. Control de vacío 5 a 1100 mbar. 29 a 101 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-estufa-doble-acceso.jpeg') }}" alt="Estufa Doble Acceso" />
+        <div class="card-body">
+          <h3>Estufa de Doble Acceso UF TS</h3>
+          <p>Para salas limpias con separación entre zonas grises y blancas. +10 °C a +250 °C. 161 a 749 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCUBADORAS -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Incubadoras</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+      <p style="color:#666;margin-top:.5rem;">Condiciones controladas para el cultivo de células, bacterias y otros organismos, asegurando resultados reproducibles. Disponible también en versión MED.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-estufa-universal.jpg') }}" alt="Incubadora IN/IF" />
+        <div class="card-body">
+          <h3>Incubadora IN/IF</h3>
+          <p>Convección natural (IN) o circulación forzada (IF). +20 °C a +80 °C. Volúmenes 32 a 749 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-Incubadora-Refrigerada-ICP.jpg') }}" alt="Incubadora Refrigerada" />
+        <div class="card-body">
+          <h3>Incubadora Refrigerada ICP</h3>
+          <p>–12 °C a +60 °C. 108 a 749 litros. Microbiología, farmacología, biotecnología, control de alimentos.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-Incubadora-CO2-ICOmed.jpg') }}" alt="Incubadora CO2" />
+        <div class="card-body">
+          <h3>Incubadora de CO₂ ICOmed</h3>
+          <p>Cultivo celular, FIV, biosíntesis. +18 °C a +50 °C, CO₂ (0–20%), O₂ (1–20%), humedad hasta 97% RH. 56 a 241 litros.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAÑOS DE AGUA -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <h2>Baños de Agua</h2>
+      <div class="gold-bar" style="margin-left:0;"></div>
+    </div>
+    <div class="product-layout">
+      <div class="product-info">
+        <h2>Baño de Agua WTB</h2>
+        <p style="color:#666;margin-bottom:1rem;">Ideal para templar, calentar y mantener muestras, con un rango de temperatura de +10 °C a +100 °C y control preciso de ±0,1 °C. Disponible en capacidades de 7,5 a 51 litros.</p>
+        <p style="color:#666;margin-bottom:1.5rem;">Perfecto para laboratorios de microbiología, control de calidad, industria cosmética, farmacéutica y alimentaria.</p>
+        <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn btn-primary">Contáctenos</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/memmert/memmert-bano-de-agua.jpg') }}" alt="Baño de Agua WTB" class="product-image" />
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

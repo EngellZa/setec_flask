@@ -1,0 +1,142 @@
+﻿{% extends "base.html" %}
+{% block title %}Instrumentación Analítica – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>Instrumentación Analítica Avanzada</h1>
+  <p>La instrumentación analítica es el núcleo operativo de los laboratorios de control de calidad, investigación aplicada y manufactura regulada.</p>
+</div>
+
+<!-- INTRO -->
+<section style="background:#fff;text-align:center;">
+  <div class="container" style="max-width:800px;">
+    <p style="color:#666;font-size:1rem;margin-bottom:2.5rem;">
+      Este sitio consolida el acceso a líneas de productos de tres fabricantes estratégicos: <strong>Mettler Toledo</strong>, <strong>Memmert</strong> y <strong>Scilogex</strong>, abarcando soluciones desde pesaje de precisión hasta procesamiento térmico controlado.
+    </p>
+    <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+      <a href="{{ url_for('mettler_toledo') }}">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/logo-mettler-transparent.png') }}" alt="Mettler Toledo" style="height:60px;object-fit:contain;" />
+      </a>
+      <a href="{{ url_for('memmert') }}">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/logo-mm.png') }}" alt="Memmert" style="height:60px;object-fit:contain;" />
+      </a>
+      <a href="{{ url_for('scilogex') }}">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/logo-sci.png') }}" alt="Scilogex" style="height:60px;object-fit:contain;" />
+      </a>
+    </div>
+    <a href="{{ url_for('otras_marcas') }}" class="btn btn-outline">Otras Marcas</a>
+  </div>
+</section>
+
+<!-- METTLER TOLEDO -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h2>Mettler Toledo</h2>
+        <p style="color:#666;margin-bottom:1rem;">Referente mundial en metrología analítica y soluciones integradas para control de procesos.</p>
+        <h4 style="margin-bottom:.5rem;">Líneas destacadas:</h4>
+        <ul>
+          <li><strong>Pesaje de laboratorio:</strong> Balanza analítica, microbalanza y comparadores de masa de alta estabilidad. Trazabilidad completa mediante conectividad a sistemas LIMS/ERP.</li>
+          <li><strong>Process Analytics:</strong> TOC, Sensores en línea para pH, redox, conductividad, oxígeno disuelto, CO₂ y turbidez. Tecnología ISM® para diagnóstico predictivo.</li>
+          <li><strong>Análisis térmico y físico-químico:</strong> pH, conductividad, titulación automática, densidad, refracción, TGA, DMA y DSC. Integración con Software LabX®.</li>
+        </ul>
+        <a href="{{ url_for('mettler_toledo') }}" class="btn btn-primary" style="margin-top:1rem;">Ir a la sección técnica</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/1-11.jpg') }}" alt="Mettler Toledo" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMMERT -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout reverse">
+      <div class="product-info">
+        <h2>Memmert</h2>
+        <p style="color:#666;margin-bottom:1rem;">Desarrollador de sistemas térmicos con precisión programable y reproducibilidad certificada.</p>
+        <h4 style="margin-bottom:.5rem;">Áreas de aplicación:</h4>
+        <ul>
+          <li><strong>Cámaras climáticas</strong> con regulación precisa de humedad y temperatura para estudios de estabilidad (ICH).</li>
+          <li><strong>Estufas de secado y esterilización</strong> con control PID y programación rampada.</li>
+          <li><strong>Incubadoras de CO₂</strong> con monitoreo activo y sensores IR.</li>
+          <li><strong>Baños de agua termostatados</strong> para aplicaciones críticas de rutina.</li>
+        </ul>
+        <a href="{{ url_for('memmert') }}" class="btn btn-primary" style="margin-top:1rem;">Ir a la sección técnica</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/1-metmmer-891x1024.jpg') }}" alt="Memmert" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCILOGEX -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h2>Scilogex</h2>
+        <p style="color:#666;margin-bottom:1rem;">Soluciones robustas y accesibles para manejo de líquidos y homogenización de muestras.</p>
+        <h4 style="margin-bottom:.5rem;">Portafolio representativo:</h4>
+        <ul>
+          <li>Agitadores orbitales y magnéticos con control digital.</li>
+          <li>Centrífugas clínicas y de microvolumen con rotor intercambiable.</li>
+          <li>Pipetas autoclavables con calibración ISO.</li>
+          <li>Mezcladores tipo vórtex para laboratorios de rutina.</li>
+        </ul>
+        <a href="{{ url_for('scilogex') }}" class="btn btn-primary" style="margin-top:1rem;">Ir a la sección técnica</a>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/Scilogex-891x1024.jpg') }}" alt="Scilogex" class="product-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICIOS TÉCNICOS -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Servicios Técnicos Especializados</h2>
+      <div class="gold-bar"></div>
+      <p style="color:#666;max-width:650px;margin:.5rem auto 0;">Ofrecemos una gama completa de servicios para garantizar el rendimiento óptimo, la trazabilidad y la vida útil de tus equipos de laboratorio.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><h3>Instalación</h3><p>Puesta en marcha profesional de equipos, asegurando su correcta configuración y funcionamiento desde el primer día.</p></div>
+      <div class="service-card"><h3>Capacitación</h3><p>Entrenamiento técnico y práctico para usuarios, adaptado al nivel de experiencia y tipo de aplicación, ya sea en sitio o virtual.</p></div>
+      <div class="service-card"><h3>Diagnóstico Técnico</h3><p>Evaluación detallada del estado del equipo, sensores y software, con generación de informes técnicos y recomendaciones.</p></div>
+      <div class="service-card"><h3>Suministro de Consumibles</h3><p>Disponibilidad continua de soluciones buffer, estándares certificados, electrolitos, sensores, kits de mantenimiento y más.</p></div>
+      <div class="service-card"><h3>Calificación IQ/OQ/PQ</h3><p>Servicios de Instalación (IQ), Operación (OQ) y Desempeño (PQ) documentados, conforme a normativas regulatorias (GMP, GLP, ISO).</p></div>
+      <div class="service-card"><h3>Mantenimiento Preventivo y Correctivo</h3><p>Preventivo: inspección, limpieza, verificación de parámetros. Correctivo: diagnóstico y reparación rápida con repuestos originales.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn btn-primary">Contáctenos</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORAR -->
+<section style="background:#fff;text-align:center;">
+  <div class="container">
+    <h2 style="margin-bottom:.5rem;">Explore Soluciones Adaptadas a su Laboratorio</h2>
+    <p style="color:#666;margin-bottom:2rem;">Acceda a las secciones especializadas y descubra configuraciones instrumentales específicas para su industria:</p>
+    <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;">
+      <a href="{{ url_for('mettler_toledo') }}">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/mettler/logo-mettler-transparent.png') }}" alt="Mettler Toledo" style="height:60px;object-fit:contain;" />
+      </a>
+      <a href="{{ url_for('memmert') }}">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/logo-mm.png') }}" alt="Memmert" style="height:60px;object-fit:contain;" />
+      </a>
+      <a href="{{ url_for('scilogex') }}">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/logo-sci.png') }}" alt="Scilogex" style="height:60px;object-fit:contain;" />
+      </a>
+      <a href="{{ url_for('otras_marcas') }}" class="btn btn-outline" style="align-self:center;">Otras Marcas</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

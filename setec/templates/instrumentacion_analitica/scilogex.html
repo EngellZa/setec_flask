@@ -1,0 +1,106 @@
+﻿{% extends "base.html" %}
+{% block title %}Scilogex – Setec{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/scilogix.png') }}" alt="Scilogex" class="brand-logo-hero" />
+  <h1>Instrumentación de Laboratorio Eficiente y Accesible</h1>
+  <p>Scilogex se especializa en la fabricación de equipos de laboratorio de alta calidad, ofreciendo soluciones innovadoras y asequibles.</p>
+</div>
+
+<section style="background:#f5f5f5;padding:1.2rem 1.5rem;">
+  <div class="container">
+    <a href="{{ url_for('instrumentacion_analitica') }}" class="back-link"><i class="fa fa-arrow-left"></i> Volver a Instrumentación Analítica</a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="background:#fff;">
+  <div class="container" style="max-width:900px;">
+    <div class="section-header">
+      <h2>Con foco en ergonomía, eficiencia y diseño inteligente</h2>
+      <div class="gold-bar"></div>
+      <p style="color:#666;margin-top:.5rem;">Scilogex ofrece una amplia gama de instrumentos eléctricos que cubren tareas fundamentales como preparación de muestras, mezcla, agitación, centrifugación, transferencia de líquidos y control térmico.</p>
+    </div>
+    <p style="color:#666;text-align:center;margin-bottom:2rem;">Los productos Scilogex combinan <strong>rendimiento técnico competitivo</strong> con una excelente relación costo-beneficio. Todos sus equipos cuentan con certificaciones CE y respaldo de soporte técnico global.</p>
+  </div>
+</section>
+
+<!-- LÍNEAS DE PRODUCTOS -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Líneas de Productos</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/1-iconos-pipetas.png') }}" alt="Pipetas" style="height:120px;object-fit:contain;padding:1rem;background:#fff;" />
+        <div class="card-body">
+          <h3>Pipetas manuales y electrónicas</h3>
+          <p>Pipetas autoclavables con calibración ISO para mayor precisión y seguridad en la transferencia de líquidos.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/2-iconos-centrifugas.png') }}" alt="Centrífugas" style="height:120px;object-fit:contain;padding:1rem;background:#fff;" />
+        <div class="card-body">
+          <h3>Centrífugas</h3>
+          <p>Centrífugas clínicas y de microvolumen con rotor intercambiable para distintas aplicaciones de investigación.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/3-iconos-agitadores.png') }}" alt="Agitadores" style="height:120px;object-fit:contain;padding:1rem;background:#fff;" />
+        <div class="card-body">
+          <h3>Agitadores magnéticos, vórtex y orbitales</h3>
+          <p>Con control digital de velocidad y temperatura para mezclado homogéneo en laboratorios de rutina.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/4-iconos-placas.png') }}" alt="Placas calefactoras" style="height:120px;object-fit:contain;padding:1rem;background:#fff;" />
+        <div class="card-body">
+          <h3>Placas calefactoras y termobloques</h3>
+          <p>Control preciso de temperatura para calentamiento uniforme de muestras en distintos formatos.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/6-iconos-evaporadores.png') }}" alt="Evaporadores" style="height:120px;object-fit:contain;padding:1rem;background:#fff;" />
+        <div class="card-body">
+          <h3>Evaporadores rotatorios</h3>
+          <p>Para concentración y purificación de muestras líquidas mediante evaporación a presión reducida.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/5-iconos-banos-de-agua.png') }}" alt="Baños de agua" style="height:120px;object-fit:contain;padding:1rem;background:#fff;" />
+        <div class="card-body">
+          <h3>Baños de agua</h3>
+          <p>Control de temperatura preciso para incubación, digestión y mantenimiento de muestras a temperatura constante.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/7-iconos-espectro.png') }}" alt="Espectrofotómetros" style="height:120px;object-fit:contain;padding:1rem;background:#fff;" />
+        <div class="card-body">
+          <h3>Espectrofotómetros UV/VIS</h3>
+          <p>Para análisis óptico de muestras en rangos UV y visible con alta reproducibilidad y fácil operación.</p>
+          <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGEN FINAL -->
+<section style="background:#fff;text-align:center;">
+  <div class="container" style="max-width:800px;">
+    <img src="{{ url_for('static', filename='img/instrumentacion_analitica/scilogex/scilogex-lab.webp') }}" alt="Scilogex Lab" style="border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.12);margin:0 auto 2rem;" />
+    <a href="https://forms.office.com/r/b4Fpf3pcZ7" target="_blank" class="btn btn-primary">Contáctenos</a>
+  </div>
+</section>
+
+{% endblock %}

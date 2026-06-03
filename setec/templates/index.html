@@ -1,0 +1,288 @@
+﻿{% extends "base.html" %}
+{% block title %}Setec – Servicios Técnicos Profesionales{% endblock %}
+
+{% block content %}
+
+<!-- ── HERO SLIDER ──────────────────────────── -->
+<section class="hero-slider">
+  <div class="slide active">
+    <img src="{{ url_for('static', filename='img/index/2-milnor-scaled.jpg') }}" alt="Lavandería Industrial" />
+    <div class="slide-content">
+      <h2>Lavandería Industrial</h2>
+      <p>Maquinaria especializada para lavado y planchado a gran escala en hoteles, hospitales y textiles.</p>
+      <a href="{{ url_for('lavanderia_industrial') }}" class="btn btn-primary">Conocer equipos</a>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="{{ url_for('static', filename='img/index/200828_Ebara-scaled-1.jpg') }}" alt="Trasiego de Fluidos" />
+    <div class="slide-content">
+      <h2>Trasiego de Fluidos</h2>
+      <p>Sistemas para la transferencia segura y precisa de líquidos en industrias alimentarias, farmacéuticas y químicas.</p>
+      <a href="{{ url_for('trasiego_de_fluidos') }}" class="btn btn-primary">Conocer equipos</a>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="{{ url_for('static', filename='img/index/room-scaled-1.jpg') }}" alt="Sistemas de Vapor" />
+    <div class="slide-content">
+      <h2>Sistemas de Vapor y Agua Caliente</h2>
+      <p>Soluciones para gestión de vapor y agua caliente en aplicaciones industriales y comerciales.</p>
+      <a href="{{ url_for('sistemas_vapor') }}" class="btn btn-primary">Conocer equipos</a>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="{{ url_for('static', filename='img/index/toledo.png') }}" alt="Instrumentación Analítica" />
+    <div class="slide-content">
+      <h2>Instrumentación Analítica y de Proceso</h2>
+      <p>Soluciones integrales en análisis e instrumentación para todo tipo de industria.</p>
+      <a href="{{ url_for('instrumentacion_analitica') }}" class="btn btn-primary">Conocer equipos</a>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="{{ url_for('static', filename='img/index/carboline-warehouse.jpg') }}" alt="Recubrimientos" />
+    <div class="slide-content">
+      <h2>Recubrimientos</h2>
+      <p>Recubrimientos industriales que garantizan calidad, durabilidad y protección contra corrosión, abrasión y desgaste.</p>
+      <a href="{{ url_for('recubrimientos') }}" class="btn btn-primary">Conocer equipos</a>
+    </div>
+  </div>
+  <button class="slide-prev">&#8249;</button>
+  <button class="slide-next">&#8250;</button>
+  <div class="slider-dots">
+    <button class="slider-dot active" data-index="0"></button>
+    <button class="slider-dot" data-index="1"></button>
+    <button class="slider-dot" data-index="2"></button>
+    <button class="slider-dot" data-index="3"></button>
+    <button class="slider-dot" data-index="4"></button>
+  </div>
+</section>
+
+<!-- ── SETEC INTRO ──────────────────────────── -->
+<section style="background:#fff;">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+    <img src="{{ url_for('static', filename='img/index/secadoras-idsutrial-1024x612.jpg') }}" alt="SETEC" style="border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.12);" />
+    <div>
+      <h2 class="section-title">SETEC: Soluciones integrales de lavandería e industriales</h2>
+      <p style="color:#666;margin-bottom:1.5rem;">
+        En SETIMAC nos comprometemos a ofrecer soluciones prácticas y efectivas para proyectos de lavandería industrial, sistemas de vapor, calentamiento de agua, equipos de bombeo, valvulería e instrumentación analítica, recubrimientos y revestimientos térmicos. Nuestro equipo certificado y experto trabaja para brindarle la mayor calidad a través del uso de tecnología de última generación y un servicio excepcional.
+      </p>
+      <a href="{{ url_for('sobre_nosotros') }}" class="btn btn-outline">Conócenos mejor</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTRUMENTACIÓN ANALÍTICA HIGHLIGHT ─── -->
+<section style="background:#f5f5f5;">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+    <div>
+      <h2 class="section-title">Instrumentación Analítica</h2>
+      <p style="color:#666;margin-bottom:1rem;">Nuestros servicios incluyen:</p>
+      <ul style="margin-left:1.2rem;list-style:disc;color:#666;font-size:.93rem;line-height:1.9;">
+        <li><strong>Suministro de equipos</strong> de laboratorio y análisis de procesos.</li>
+        <li><strong>Tratamiento y preparación de muestras</strong> para análisis confiables.</li>
+        <li><strong>Materiales de referencia certificados</strong>.</li>
+        <li><strong>Calibración profesional</strong> bajo estándares internacionales.</li>
+        <li><strong>Instalación técnica especializada</strong>.</li>
+        <li><strong>Capacitación personalizada</strong> para todos nuestros equipos.</li>
+      </ul>
+      <p style="color:#666;margin:1rem 0 1.5rem;">Conectamos tecnología, precisión y experiencia para garantizar resultados confiables en cada etapa de su operación.</p>
+      <a href="{{ url_for('instrumentacion_analitica') }}" class="btn btn-primary">Conócenos mejor</a>
+    </div>
+    <img src="{{ url_for('static', filename='img/index/1-parametros-medicos.jpg') }}" alt="Instrumentación Analítica" style="border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.12);" />
+  </div>
+</section>
+
+<!-- ── INDUSTRIAS ───────────────────────────── -->
+<section style="background:#fff;text-align:center;">
+  <div class="container">
+    <div class="section-header">
+      <p style="color:#c8a94a;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.85rem;">MEJORANDO CADA DIA</p>
+      <h2>Trabajamos con gran variedad de industrias</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="industrias-list" style="justify-content:center;">
+      <span class="industria-tag">Construcción</span>
+      <span class="industria-tag">Agroindustria</span>
+      <span class="industria-tag">Industrias</span>
+      <span class="industria-tag">Envases comerciales</span>
+      <span class="industria-tag">Médico Farmacéutica</span>
+      <span class="industria-tag">Pinturas</span>
+      <span class="industria-tag">Aceites</span>
+      <span class="industria-tag">Químicos</span>
+      <span class="industria-tag">Cárnica</span>
+      <span class="industria-tag">Planificación</span>
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Conocer más industrias</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTOS Y SERVICIOS ─────────────────── -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Productos y Servicios</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-body">
+          <h3>Lavandería Industrial</h3>
+          <p>Eficiencia y limpieza en grandes volúmenes. Equipos avanzados garantizan calidad y rapidez en la limpieza de textiles para hoteles, hospitales y restaurantes.</p>
+          <a href="{{ url_for('lavanderia_industrial') }}" class="btn-primary btn">Ver más</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>Instrumentación Analítica</h3>
+          <p>Instrumentación especializada que permite realizar análisis detallados y precisos en diversas muestras, proporcionando información crucial para la toma de decisiones.</p>
+          <a href="{{ url_for('instrumentacion_analitica') }}" class="btn-primary btn">Ver más</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>Sistemas de Vapor y Agua Caliente</h3>
+          <p>Infraestructuras vitales que proveen calor y energía en una amplia gama de aplicaciones industriales y comerciales.</p>
+          <a href="{{ url_for('sistemas_vapor') }}" class="btn-primary btn">Ver más</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>Trasiego de Fluidos</h3>
+          <p>Transporte controlado de líquidos y gases en sistemas industriales y comerciales, garantizando la distribución eficiente y segura de materiales.</p>
+          <a href="{{ url_for('trasiego_de_fluidos') }}" class="btn-primary btn">Ver más</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>Recubrimientos</h3>
+          <p>Desde pinturas industriales que protegen estructuras metálicas hasta recubrimientos cerámicos que proporcionan aislamiento térmico.</p>
+          <a href="{{ url_for('recubrimientos') }}" class="btn-primary btn">Ver más</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>Proyectos</h3>
+          <p>Desde la construcción de infraestructuras hasta el desarrollo de nuevos productos, gestionamos recursos y tiempo para lograr resultados exitosos.</p>
+          <a href="{{ url_for('contacto') }}" class="btn-primary btn">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARCAS ────────────────────────────────── -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <p style="color:#c8a94a;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.85rem;">Innovación</p>
+      <h2>Representamos con orgullo marcas de renombre mundial</h2>
+      <div class="gold-bar"></div>
+      <p style="color:#666;max-width:700px;margin:.8rem auto 0;">Nos enorgullece ofrecer una amplia selección de productos de las más exclusivas marcas mundiales reconocidas por su calidad, rendimiento y eficiencia.</p>
+    </div>
+    <div class="brands-row">
+      <img src="{{ url_for('static', filename='img/logos/winters.svg') }}" alt="Winters" />
+      <img src="{{ url_for('static', filename='img/logos/tango.svg') }}" alt="Tango" />
+      <img src="{{ url_for('static', filename='img/logos/spiraxlogo.svg') }}" alt="Spirax" />
+      <img src="{{ url_for('static', filename='img/logos/fill.svg') }}" alt="Fill" />
+      <img src="{{ url_for('static', filename='img/logos/tuthill.svg') }}" alt="Tuthill" />
+      <img src="{{ url_for('static', filename='img/logos/ebaralog.svg') }}" alt="Ebara" />
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-outline">Conoce más sobre nuestros productos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALERÍA ───────────────────────────────── -->
+<section style="background:#f5f5f5;">
+  <div class="container">
+    <div class="section-header">
+      <p style="color:#c8a94a;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.85rem;">Nuestra trayectoria</p>
+      <h2>Galería de Casos de Éxitos</h2>
+      <div class="gold-bar"></div>
+      <p style="color:#666;max-width:680px;margin:.8rem auto 0;">Te invitamos a sumergirte en nuestra Galería de Proyectos, un escaparate donde podrás apreciar de primera mano la calidad y el impacto de nuestro trabajo.</p>
+    </div>
+    <div class="gallery-grid">
+      <a href="{{ url_for('static', filename='img/index/home-hero-scaled.webp') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/index/home-hero-scaled.webp') }}" alt="Proyecto 1" />
+      </a>
+      <a href="{{ url_for('static', filename='img/index/secadoras-idsutrial-scaled.jpg') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/index/secadoras-idsutrial-scaled.jpg') }}" alt="Proyecto 2" />
+      </a>
+      <a href="{{ url_for('static', filename='img/index/lavanderia-1-scaled.webp') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/index/lavanderia-1-scaled.webp') }}" alt="Proyecto 3" />
+      </a>
+      <a href="{{ url_for('static', filename='img/index/image-hero-scaled.webp') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/index/image-hero-scaled.webp') }}" alt="Proyecto 4" />
+      </a>
+      <a href="{{ url_for('static', filename='img/index/hero2-scaled.webp') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/index/hero2-scaled.webp') }}" alt="Proyecto 5" />
+      </a>
+      <a href="{{ url_for('static', filename='img/index/recurso-setec.jpeg') }}" target="_blank">
+        <img src="{{ url_for('static', filename='img/index/recurso-setec.jpeg') }}" alt="Proyecto 6" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA CONTACTO ──────────────────────────── -->
+<section style="background:#1a1a1a;color:#fff;text-align:center;padding:4rem 1.5rem;">
+  <div class="container" style="max-width:700px;">
+    <h2 style="font-size:1.8rem;margin-bottom:.5rem;">Impulsando marcas a la cima del mercado</h2>
+    <h3 style="font-size:1.4rem;margin-bottom:1.5rem;color:#c8a94a;">¡Convierte tus Ideas en Acción!</h3>
+    <p style="opacity:.85;margin-bottom:2rem;">¡Es hora de hacer que tus proyectos despeguen! Contáctanos y déjanos ayudarte a convertir tus ideas en realidad.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Enviar mensaje</a>
+      <a href="http://wa.link/omdjxs" target="_blank" class="btn btn-outline" style="border-color:#25d366;color:#25d366;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── VALOR AGREGADO ────────────────────────── -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <p style="color:#c8a94a;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.85rem;">Mejorando cada día</p>
+      <h2>Ofrecemos a nuestros clientes valor agregado cuantificable</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="value-list">
+      <div class="value-item">
+        <i class="fa fa-handshake"></i>
+        <div><h4>Asesoría continua</h4><p>Identificamos la aplicación que mejor se adapte a sus necesidades. Con nuestro equipo experto te guiamos hacia la solución ideal.</p></div>
+      </div>
+      <div class="value-item">
+        <i class="fa fa-drafting-compass"></i>
+        <div><h4>Dibujo y diseño en planos de ingeniería</h4><p>Convertimos tu visión en realidad con precisión y profesionalismo.</p></div>
+      </div>
+      <div class="value-item">
+        <i class="fa fa-key"></i>
+        <div><h4>Proyectos llave en mano</h4><p>Desde la concepción hasta la ejecución nos encargamos de todo, ofreciendo una solución integral y sin complicaciones.</p></div>
+      </div>
+      <div class="value-item">
+        <i class="fa fa-shield-alt"></i>
+        <div><h4>Garantías extendidas</h4><p>Ofrecemos cobertura adicional a la garantía legal o de fabricante, extendiendo el período de protección.</p></div>
+      </div>
+      <div class="value-item">
+        <i class="fa fa-boxes"></i>
+        <div><h4>Inventario de repuestos</h4><p>Garantizamos soluciones inmediatas con nuestro amplio inventario de repuestos.</p></div>
+      </div>
+      <div class="value-item">
+        <i class="fa fa-clock"></i>
+        <div><h4>Repuestos en producción por 10 años</h4><p>Garantizamos la existencia de repuestos en línea de producción durante al menos 10 años.</p></div>
+      </div>
+      <div class="value-item">
+        <i class="fa fa-tools"></i>
+        <div><h4>Mantenimiento preventivo y correctivo</h4><p>Programas que mantienen tus sistemas funcionando sin problemas, evitando fallas antes de que sucedan.</p></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Más sobre nosotros</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
