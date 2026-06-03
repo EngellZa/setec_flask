@@ -176,7 +176,7 @@ def contacto():
 
         html_body = f"""
         <html><body style="font-family:Arial,sans-serif;color:#333;">
-          <h2 style="color:#0d1b5e;"> SETEC Web Lead - Nueva solicitud de contacto  - {empresa} - {nombre}</h2>
+          <h2 style="color:#0d1b5e;"> Nueva solicitud de contacto </h2>
           <table cellpadding="8" style="border-collapse:collapse;width:100%;max-width:600px;">
             <tr style="background:#f5f5f5;">
               <td style="font-weight:bold;width:130px;">Nombre</td><td>{nombre}</td>
