@@ -176,7 +176,7 @@ def contacto():
 
         html_body = f"""
         <html><body style="font-family:Arial,sans-serif;color:#333;">
-          <h2 style="color:#0d1b5e;">Nuevo mensaje desde el formulario web</h2>
+          <h2 style="color:#0d1b5e;"> SETEC Web Lead - Nueva solicitud de contacto  - {empresa} - {nombre}</h2>
           <table cellpadding="8" style="border-collapse:collapse;width:100%;max-width:600px;">
             <tr style="background:#f5f5f5;">
               <td style="font-weight:bold;width:130px;">Nombre</td><td>{nombre}</td>
@@ -207,7 +207,7 @@ def contacto():
 
         try:
             msg = Message(
-                subject=f"Contacto web: {asunto}",
+                subject=f" SETEC Web Lead | Nueva solicitud de contacto - {empresa} - {nombre}",
                 recipients=[DEST_EMAIL],
                 html=html_body,
                 reply_to=str(email_u),
