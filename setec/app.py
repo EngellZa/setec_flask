@@ -47,7 +47,10 @@ limiter = Limiter(
     storage_uri='memory://',
 )
 
-DEST_EMAIL = 'enzapata@setec-cr.com'
+# Soporta múltiples destinatarios separados por coma
+# Ejemplo: leads@setec-cr.com,ventas@setec-cr.com,gerencia@setec-cr.com
+_dest_raw   = os.environ.get('DEST_EMAIL', 'leads@setec-cr.com')
+DEST_EMAILS = [e.strip() for e in _dest_raw.split(',') if e.strip()]
 
 # ──────────────────────────────────────────────
 # CABECERAS DE SEGURIDAD HTTP
@@ -207,14 +210,14 @@ def contacto():
 
         try:
             msg = Message(
-                subject=f" SETEC Web Lead | Nueva solicitud de contacto - {empresa} - {nombre}",
-                recipients=[DEST_EMAIL],
+                subject=f"SETEC Web Lead | {empresa} – {nombre}",
+                recipients=DEST_EMAILS,   # todos reciben el mismo lead
                 html=html_body,
-                reply_to=str(email_u),
+                reply_to=str(email_u),    # responder va directo al cliente
             )
             mail.send(msg)
             sent = True
-            logger.info('Formulario enviado correctamente desde %s', request.remote_addr)
+            logger.info('Lead enviado a %s desde %s', DEST_EMAILS, request.remote_addr)
         except Exception as e:
             logger.error('Error al enviar correo: %s', e)
             error = True
