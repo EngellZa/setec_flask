@@ -1,0 +1,518 @@
+{% extends "base.html" %}
+{% block title %}Calderas Industriales Bosch en Costa Rica | Vapor y Agua Caliente – Setec{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Representante autorizado Bosch en Costa Rica. Calderas de vapor y eléctricas ELSB, CSB y UL-S/UL-SX: ingeniería, venta, instalación, puesta en marcha y mantenimiento con SETEC." />
+<link rel="canonical" href="{{ request.url_root }}calderas-de-vapor-bosch/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Calderas Industriales Bosch en Costa Rica – Setec" />
+<meta property="og:description" content="Ingeniería, venta, instalación y mantenimiento de calderas Bosch ELSB, CSB y UL-S/UL-SX. Más de 70 años de experiencia industrial en Costa Rica." />
+<meta property="og:image" content="{{ request.url_root.rstrip('/') }}{{ url_for('static', filename='img/calderas_bosch/uls-hero.png') }}" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Qué diferencia hay entre una caldera de vapor y una caldera de agua caliente?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La caldera de vapor genera vapor saturado a presión para procesos, esterilización o generación de energía, mientras que la caldera de agua caliente calienta agua para climatización, agua sanitaria o procesos que no requieren vapor. Bosch fabrica ambas familias; SETEC le ayuda a seleccionar la correcta según su aplicación."}},
+    {"@type": "Question", "name": "¿Qué nivel de eficiencia energética ofrecen las calderas Bosch?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Según el modelo, las calderas Bosch alcanzan eficiencias de hasta 95,3% en la línea CSB con economizador, y superiores al 99% en la ELSB eléctrica, gracias a tecnología de tubos helicoidales, intercambiadores de condensación y cámaras de combustión optimizadas."}},
+    {"@type": "Question", "name": "¿Qué tipos de combustible pueden usar las calderas Bosch?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Las líneas CSB y UL-S/UL-SX operan con gas natural, diésel, biogás, bioaceite e hidrógeno (hasta 20% en mezcla). La ELSB es 100% eléctrica, sin combustión ni emisiones directas."}},
+    {"@type": "Question", "name": "¿Cuánto tiempo toma instalar una caldera industrial Bosch?",
+     "acceptedAnswer": {"@type": "Answer", "text": "El plazo depende de la capacidad, obra civil y disponibilidad de accesorios; SETEC realiza el levantamiento técnico, diseño de sala de calderas y cronograma de instalación como parte del proyecto llave en mano."}},
+    {"@type": "Question", "name": "¿Qué presiones de trabajo manejan los distintos modelos?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La ELSB trabaja hasta 24 bar, la CSB entre 0,5 y 16 bar según variante ND/HD, y la UL-S/UL-SX hasta 30 bar de presión de vapor saturado."}},
+    {"@type": "Question", "name": "¿Las calderas Bosch cumplen normativas de emisiones?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Sí. Las cámaras de combustión de gran tamaño y los quemadores optimizados permiten emisiones de NOx por debajo de 50 mg/kWh en la UL-S y de 60 mg/kWh en la CSB, cumpliendo normativas europeas exigentes que superan los estándares locales."}},
+    {"@type": "Question", "name": "¿Qué incluye el mantenimiento con SETEC?",
+     "acceptedAnswer": {"@type": "Answer", "text": "SETEC ofrece mantenimiento preventivo y correctivo, repuestos originales Bosch, soporte técnico local y contratos de mantenimiento programado para maximizar la disponibilidad de su equipo."}},
+    {"@type": "Question", "name": "¿Puedo modernizar mi caldera actual en lugar de reemplazarla?",
+     "acceptedAnswer": {"@type": "Answer", "text": "En muchos casos sí. SETEC evalúa su instalación y propone medidas de modernización (retrofit) — economizadores, controles inteligentes, recuperación de calor— para mejorar eficiencia y prolongar la vida útil sin necesariamente sustituir el equipo completo."}},
+    {"@type": "Question", "name": "¿Qué capacidad de producción de vapor necesito para mi planta?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Depende de la demanda térmica de sus procesos (esterilización, lavandería, cocción, generación eléctrica, etc.). SETEC realiza un análisis de carga térmica para dimensionar el equipo correcto dentro del rango de 300 a 28.000 kg/h que cubre el portafolio Bosch."}},
+    {"@type": "Question", "name": "¿SETEC vende repuestos originales Bosch en Costa Rica?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Sí, como representante autorizado SETEC mantiene disponibilidad de repuestos originales Bosch y soporte técnico local para toda la línea de calderas."}}
+  ]
+}
+</script>
+<style>
+  .cb-product-img { background: transparent; box-shadow: none; border-radius: 0; filter: drop-shadow(0 14px 18px rgba(0,0,0,.22)); }
+  .cb-tag-soon { background: var(--primary); transition: var(--transition); cursor: pointer; }
+  .cb-tag-soon:hover, .cb-tag-soon.active { background: var(--primary-hover); }
+  .cb-float { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 900; display: flex; flex-direction: column; gap: .6rem; }
+  .cb-float a { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; box-shadow: var(--shadow-hover); transition: var(--transition); }
+  .cb-float a:hover { transform: scale(1.08); }
+  .cb-float .cb-whatsapp { background: #25d366; }
+  .cb-float .cb-cotizar { background: var(--primary); }
+  @media (max-width: 600px) { .cb-float { right: .8rem; bottom: .8rem; } .cb-float a { width: 46px; height: 46px; font-size: 1.1rem; } }
+  #cb-componentes .card img { height: 220px; object-fit: contain; background: #fff; padding: 1rem; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="product-hero product-hero--light">
+  <img src="{{ url_for('static', filename='img/calderas_bosch/logo-bosch.svg') }}" alt="Bosch" class="brand-logo-hero" style="background:#fff;padding:.6rem 1.2rem;border-radius:8px;" />
+  <h1>Calderas Industriales Bosch</h1>
+  <p>Ingeniería alemana en generación de vapor y agua caliente. SETEC es representante autorizado Bosch en Costa Rica: venta, instalación, puesta en marcha y mantenimiento con más de 70 años de respaldo industrial.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="{{ url_for('contacto') }}" class="btn btn-primary">Solicitar Cotización</a>
+    <a href="#modelos" class="btn btn-outline">Ver Modelos</a>
+  </div>
+</div>
+
+<!-- ESTADÍSTICAS -->
+<section style="background:var(--secondary);padding:2.5rem 1.5rem;">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-box"><span class="stat-number">70+</span><span class="stat-label">Años de experiencia SETEC</span></div>
+      <div class="stat-box"><span class="stat-number">28,000</span><span class="stat-label">kg/h de vapor, capacidad máxima</span></div>
+      <div class="stat-box"><span class="stat-number">30 bar</span><span class="stat-label">Presión máxima de operación</span></div>
+      <div class="stat-box"><span class="stat-number">99%</span><span class="stat-label">Eficiencia en línea eléctrica ELSB</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ BOSCH -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <h2>¿Por qué elegir Calderas Bosch?</h2>
+      <div class="gold-bar"></div>
+      <p>Tecnología alemana con más de 130 años de trayectoria industrial, diseñada para maximizar eficiencia, confiabilidad y retorno sobre la inversión.</p>
+    </div>
+    <div class="value-list">
+      <div class="value-item"><i class="fa fa-industry"></i><div><h4>Fabricación alemana</h4><p>Ingeniería y manufactura Bosch bajo estrictos estándares de calidad europeos.</p></div></div>
+      <div class="value-item"><i class="fa fa-bolt"></i><div><h4>Alta eficiencia energética</h4><p>Hasta 95,3% de eficiencia térmica con economizador y hasta 99% en la línea eléctrica.</p></div></div>
+      <div class="value-item"><i class="fa fa-gas-pump"></i><div><h4>Menor consumo de combustible</h4><p>Tecnología de tubos helicoidales e intercambiadores de condensación que reducen el consumo.</p></div></div>
+      <div class="value-item"><i class="fa fa-leaf"></i><div><h4>Baja emisión de contaminantes</h4><p>Emisiones de NOx por debajo de 50 mg/kWh, cumpliendo normativas europeas exigentes.</p></div></div>
+      <div class="value-item"><i class="fa fa-shield-alt"></i><div><h4>Máxima confiabilidad</h4><p>Diseño robusto de gran volumen de agua y cámaras de combustión sobredimensionadas.</p></div></div>
+      <div class="value-item"><i class="fa fa-microchip"></i><div><h4>Automatización inteligente</h4><p>Controles BCO/SCO, monitoreo remoto MEC Remote y compatibilidad con Industria 4.0.</p></div></div>
+      <div class="value-item"><i class="fa fa-hourglass-half"></i><div><h4>Larga vida útil</h4><p>Componentes de acero de alto espesor y diseño modular pensado para décadas de operación.</p></div></div>
+      <div class="value-item"><i class="fa fa-tools"></i><div><h4>Fácil mantenimiento</h4><p>Cámara de combustión telescópica y accesos amplios que simplifican la limpieza y el servicio.</p></div></div>
+      <div class="value-item"><i class="fa fa-chart-line"></i><div><h4>Alto retorno sobre la inversión</h4><p>Menor consumo, menor tiempo muerto y mayor disponibilidad operativa a lo largo del ciclo de vida.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELOS -->
+<section id="modelos" style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Línea de Calderas Bosch</h2>
+      <div class="gold-bar"></div>
+      <p>Tres familias de generación de vapor y agua caliente para cubrir desde 300 hasta 28.000 kg/h de vapor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ELSB -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h3>Generación 100% eléctrica</h3>
+        <h2>Caldera Eléctrica ELSB</h2>
+        <p style="color:#666;margin-bottom:1rem;">Generador de vapor íntegramente eléctrico, sin combustión ni emisiones directas. Ideal para plantas que buscan suministro de vapor neutro en carbono cuando se alimenta con energía renovable.</p>
+        <ul>
+          <li>Capacidad: 350 – 8.300 kg/h de vapor</li>
+          <li>Presión máxima: 24 bar</li>
+          <li>Temperatura máxima: 224 °C</li>
+          <li>Medio: vapor saturado de alta presión</li>
+          <li>Alimentación eléctrica: 380/400/690 V</li>
+          <li>Eficiencia superior al 99%</li>
+          <li>Sin ductos de escape ni infraestructura de combustible</li>
+        </ul>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem;">
+          <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar ELSB</a>
+          <a href="https://www.bosch-industrial.com/latam/es/ocs/comercial-e-industrial/caldera-electrica-elsb-19175285-p/" target="_blank" rel="noopener" class="btn btn-outline">Ficha técnica Bosch</a>
+        </div>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/calderas_bosch/elsb-2.png') }}" alt="Caldera eléctrica Bosch ELSB" class="product-image cb-product-img" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSB -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout reverse">
+      <div class="product-info">
+        <h3>Diseño compacto y flexible en combustibles</h3>
+        <h2>Caldera de Vapor Universal CSB</h2>
+        <p style="color:#666;margin-bottom:1rem;">Caldera compacta según norma EN12953, con tecnología de tubos helicoidales que mejora el intercambio térmico y cámara de combustión telescópica para facilitar el mantenimiento.</p>
+        <ul>
+          <li>Capacidad: 300 – 23.600 kg/h de vapor</li>
+          <li>Presión de diseño: 0,5 – 16 bar (variantes ND / HD)</li>
+          <li>Eficiencia de hasta 95,3% con economizador integrado</li>
+          <li>Combustibles: gas natural, diésel, biogás, bioaceite, hidrógeno (hasta 20%)</li>
+          <li>Emisiones de NOx por debajo de 60 mg/kWh</li>
+          <li>Control táctil CSC o BCO según capacidad</li>
+        </ul>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem;">
+          <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar CSB</a>
+          <a href="https://www.bosch-industrial.com/latam/es/ocs/comercial-e-industrial/caldera-de-vapor-universal-csb-1001957-p/" target="_blank" rel="noopener" class="btn btn-outline">Ficha técnica Bosch</a>
+        </div>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/calderas_bosch/csb-hero.png') }}" alt="Caldera de vapor Bosch CSB" class="product-image cb-product-img" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UL-S / UL-SX -->
+<div class="product-block">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-info">
+        <h3>La caldera de vapor más vendida del mundo</h3>
+        <h2>Caldera de Vapor Universal UL-S / UL-SX</h2>
+        <p style="color:#666;margin-bottom:1rem;">Caldera pirotubular de tres pasos y llama única, con disposición asimétrica del tubo de llama para circulación natural del agua. La variante UL-SX incorpora módulo de vapor sobrecalentado.</p>
+        <ul>
+          <li>Capacidad: 1.250 – 28.000 kg/h de vapor</li>
+          <li>Presión máxima: 30 bar</li>
+          <li>Temperatura máxima: 235 °C</li>
+          <li>Combustibles: gas, diésel, biogás, biocombustible, hidrógeno</li>
+          <li>Emisiones de NOx por debajo de 50 mg/kWh</li>
+          <li>Compatible con Industria 4.0 mediante control BCO</li>
+        </ul>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem;">
+          <a href="{{ url_for('contacto') }}" class="btn btn-primary">Cotizar UL-S / UL-SX</a>
+          <a href="https://www.bosch-industrial.com/latam/es/ocs/comercial-e-industrial/caldera-de-vapor-universal-ul-s-ul-sx-669474-p/" target="_blank" rel="noopener" class="btn btn-outline">Ficha técnica Bosch</a>
+        </div>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='img/calderas_bosch/uls-hero.png') }}" alt="Caldera de vapor Bosch UL-S UL-SX" class="product-image cb-product-img" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABLA COMPARATIVA -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Comparativa Técnica</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>Modelo</th><th>Capacidad</th><th>Presión máx.</th><th>Fuente energética</th><th>Eficiencia</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ELSB</td><td>350 – 8.300 kg/h</td><td>24 bar</td><td>Eléctrica (380/400/690 V)</td><td>&gt; 99%</td></tr>
+          <tr><td>CSB</td><td>300 – 23.600 kg/h</td><td>16 bar</td><td>Gas, diésel, biogás, bioaceite, H₂</td><td>Hasta 95,3%</td></tr>
+          <tr><td>UL-S / UL-SX</td><td>1.250 – 28.000 kg/h</td><td>30 bar</td><td>Gas, diésel, biogás, biocombustible, H₂</td><td>Alta eficiencia en todo el rango</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTES Y ACCESORIOS -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Componentes y Accesorios para Calderas de Vapor</h2>
+      <div class="gold-bar"></div>
+      <p>Módulos Bosch complementarios para optimizar la eficiencia, seguridad y tratamiento de agua de su sala de calderas.</p>
+    </div>
+    <div class="cards-grid" id="cb-componentes">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/eco-intercambiador-gases.png') }}" alt="Intercambiador de calor de gases de escape" />
+        <div class="card-body"><h3>Intercambiador de Calor de Gases de Escape</h3><p>Recupera el calor de los gases de escape con ahorros de combustible de hasta 7% (14% con condensación adicional).</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/fwm.png') }}" alt="Módulo de refrigeración de agua de alimentación FWM" />
+        <div class="card-body"><h3>Módulo de Refrigeración de Agua de Alimentación (FWM)</h3><p>Aprovecha el calor de los gases de escape para precalentar el agua de alimentación, con ahorro de hasta 1,8% de combustible.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/csm.png') }}" alt="Módulo de recuperación de condensados CSM" />
+        <div class="card-body"><h3>Módulo de Recuperación de Condensados (CSM)</h3><p>Permite el uso seguro del condensado en el sistema de vapor, reduciendo el consumo energético de desgasificación y el potencial de corrosión.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/wsm.png') }}" alt="Módulo de agua de servicio WSM-V WSM-T" />
+        <div class="card-body"><h3>Módulo de Agua de Servicio (WSM-V / WSM-T)</h3><p>Tratamiento del agua de alimentación con desgasificación total (WSM-V) o parcial (WSM-T) para evitar corrosión y reducir consumo químico.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/wtm.png') }}" alt="Módulo de tratamiento de agua WTM" />
+        <div class="card-body"><h3>Módulo de Tratamiento de Agua (WTM)</h3><p>Descalcificación automática del agua de alimentación para prevenir depósitos de cal y prolongar la vida útil de la caldera.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/pm.png') }}" alt="Módulo de bomba de alimentación de agua PM" />
+        <div class="card-body"><h3>Módulo de Bomba de Alimentación de Agua (PM)</h3><p>Suministro de agua de alimentación o condensado con regulación por revoluciones y opción de bomba redundante.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/rm.png') }}" alt="Módulo de regulación del agua de alimentación RM" />
+        <div class="card-body"><h3>Módulo de Regulación del Agua de Alimentación (RM)</h3><p>Control continuo del agua de alimentación para mayor eficiencia del intercambiador y nivel de agua constante.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/bem.png') }}" alt="Módulo de recogida, expansión y enfriamiento de purgas BEM" />
+        <div class="card-body"><h3>Módulo de Recogida, Expansión y Enfriamiento de Purgas (BEM)</h3><p>Refrigera el agua de purga hasta la temperatura permitida, con montaje rápido y cumplimiento normativo automático.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/ehm.png') }}" alt="Módulo de expansión y recuperación térmica de purgas EHM" />
+        <div class="card-body"><h3>Módulo de Expansión y Recuperación Térmica de Purgas (EHM)</h3><p>Recupera el calor de las purgas, aumentando la eficiencia hasta 2% y reduciendo costos de combustible y agua.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/ehb.png') }}" alt="Módulo de purgas, expansión y enfriamiento EHB" />
+        <div class="card-body"><h3>Módulo de Purgas, Expansión y Enfriamiento (EHB)</h3><p>Refrigeración y recuperación de energía de las purgas de forma automática, con eficiencia de hasta 2%.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/vc.png') }}" alt="Refrigerador del vapor de venteos VC" />
+        <div class="card-body"><h3>Refrigerador del Vapor de Venteos (VC)</h3><p>Recupera el calor del vapor flash para aprovecharlo en calentamiento adicional dentro de la planta.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/aph.png') }}" alt="Precalentador de aire de combustión APH" />
+        <div class="card-body"><h3>Precalentador de Aire de Combustión (APH)</h3><p>Precalienta el aire de combustión, reduciendo el consumo de combustible hasta 2% con baja inversión.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/grm.png') }}" alt="Módulo de regulación de gas GRM" />
+        <div class="card-body"><h3>Módulo de Regulación de Gas (GRM)</h3><p>Suministro fiable de combustible gaseoso, preensamblado para una instalación rápida y mayor seguridad.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/sd.png') }}" alt="Distribuidor de vapor SD" />
+        <div class="card-body"><h3>Distribuidor de Vapor (SD)</h3><p>Distribuye el flujo másico de vapor entre los distintos consumidores, reduciendo pérdidas de red.</p></div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/calderas_bosch/componentes/sam.png') }}" alt="Módulo de almacenamiento de vapor SAM" />
+        <div class="card-body"><h3>Módulo de Almacenamiento de Vapor (SAM)</h3><p>Cubre demandas pico de vapor a corto plazo, reduciendo el escape de vapor y el número de arranques.</p></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a href="https://www.bosch-industrial.com/latam/es/ocs/comercial-e-industrial/componentes-para-calderas-de-vapor-y-para-el-tratamiento-de-agua-669539-c/" target="_blank" rel="noopener" class="btn btn-outline">Ver catálogo completo Bosch</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIONES SETEC -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Soluciones SETEC para su Sistema de Vapor</h2>
+      <div class="gold-bar"></div>
+      <p>Como representante autorizado Bosch, SETEC acompaña el proyecto de principio a fin.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card"><div class="card-body"><h3>Ingeniería y diseño</h3><p>Análisis de carga térmica y diseño de sala de calderas ajustado a su operación.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Selección del equipo</h3><p>Dimensionamiento del modelo Bosch óptimo para su capacidad y combustible disponible.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Venta e instalación</h3><p>Suministro e instalación del equipo y sus módulos auxiliares.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Puesta en marcha</h3><p>Arranque, pruebas de presión y ajuste de combustión bajo supervisión técnica.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Capacitación</h3><p>Formación al personal operativo y de mantenimiento de planta.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Mantenimiento preventivo</h3><p>Programas periódicos para maximizar disponibilidad y vida útil del equipo.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Mantenimiento correctivo</h3><p>Atención técnica ante fallas, con diagnóstico y reparación especializada.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Repuestos originales</h3><p>Disponibilidad de repuestos originales Bosch con respaldo local.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Modernización de sistemas</h3><p>Actualización de controles y componentes en calderas existentes.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Optimización energética</h3><p>Ajustes de combustión y recuperación de calor para reducir consumo.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Auditorías energéticas</h3><p>Evaluación del desempeño térmico y oportunidades de ahorro.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Contratos de mantenimiento</h3><p>Planes programados con tiempos de respuesta garantizados.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAFOLIO EN EXPANSIÓN -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Portafolio Bosch en Costa Rica</h2>
+      <div class="gold-bar"></div>
+      <p>Iniciamos con la línea de calderas de vapor y agua caliente; próximamente ampliaremos el catálogo con más soluciones Bosch.</p>
+    </div>
+    <div id="cb-portfolio-tags" style="display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;">
+      <span class="industria-tag cb-tag-soon active" data-cb-tag>Calderas de Vapor</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Calderas de Agua Caliente</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Calderas de Alta Presión</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Sistemas Modulares</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Recuperación de Calor</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Economizadores</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Accesorios</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Tratamiento de Agua</span>
+      <span class="industria-tag cb-tag-soon" data-cb-tag>Controles Inteligentes</span>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS ECONÓMICOS -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Beneficios Económicos para su Operación</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature"><h3>Reducción del consumo energético</h3><p>Menor gasto en combustible o electricidad por unidad de vapor producida.</p></div>
+      <div class="feature"><h3>Menor costo operativo</h3><p>Equipos de alta eficiencia que reducen el costo total de operación.</p></div>
+      <div class="feature"><h3>Mayor disponibilidad</h3><p>Diseño robusto y mantenimiento programado que minimizan paradas no planeadas.</p></div>
+      <div class="feature"><h3>Menor tiempo muerto</h3><p>Soporte técnico local y repuestos disponibles para atención rápida.</p></div>
+      <div class="feature"><h3>Menor mantenimiento</h3><p>Accesos amplios y cámaras de combustión telescópicas que agilizan el servicio.</p></div>
+      <div class="feature"><h3>Mayor productividad</h3><p>Suministro estable de vapor o agua caliente para procesos continuos.</p></div>
+      <div class="feature"><h3>Mayor seguridad</h3><p>Controles y sistemas de seguridad certificados bajo estándares europeos.</p></div>
+      <div class="feature"><h3>Menores emisiones</h3><p>Cumplimiento de normativas ambientales exigentes con menor huella de carbono.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ SETEC -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>¿Por qué SETEC?</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="value-list">
+      <div class="value-item"><i class="fa fa-award"></i><div><h4>Más de 70 años de experiencia</h4><p>Trayectoria comprobada en ingeniería industrial en Costa Rica.</p></div></div>
+      <div class="value-item"><i class="fa fa-drafting-compass"></i><div><h4>Ingeniería especializada</h4><p>Equipo técnico dedicado a sistemas de vapor y agua caliente.</p></div></div>
+      <div class="value-item"><i class="fa fa-user-graduate"></i><div><h4>Personal certificado</h4><p>Técnicos capacitados directamente por los fabricantes representados.</p></div></div>
+      <div class="value-item"><i class="fa fa-map-marker-alt"></i><div><h4>Soporte local</h4><p>Atención técnica sin depender de proveedores en el extranjero.</p></div></div>
+      <div class="value-item"><i class="fa fa-flag"></i><div><h4>Cobertura nacional</h4><p>Servicio en todo el territorio costarricense.</p></div></div>
+      <div class="value-item"><i class="fa fa-bolt"></i><div><h4>Atención rápida</h4><p>Respuesta ágil ante solicitudes de servicio y emergencias.</p></div></div>
+      <div class="value-item"><i class="fa fa-headset"></i><div><h4>Respaldo técnico</h4><p>Acompañamiento durante toda la vida útil del equipo.</p></div></div>
+      <div class="value-item"><i class="fa fa-key"></i><div><h4>Soluciones llave en mano</h4><p>Desde el diseño hasta la puesta en marcha, sin complicaciones.</p></div></div>
+      <div class="value-item"><i class="fa fa-tools"></i><div><h4>Servicio postventa</h4><p>Mantenimiento, repuestos y soporte continuo después de la compra.</p></div></div>
+      <div class="value-item"><i class="fa fa-handshake"></i><div><h4>Alianzas con fabricantes líderes</h4><p>Representación de marcas internacionales de primer nivel.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAS -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Industrias que Confían en Calderas Bosch</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;">
+      <span class="industria-tag">Industria alimentaria</span>
+      <span class="industria-tag">Industria farmacéutica</span>
+      <span class="industria-tag">Industria química</span>
+      <span class="industria-tag">Textiles</span>
+      <span class="industria-tag">Manufactura</span>
+      <span class="industria-tag">Hospitales</span>
+      <span class="industria-tag">Hoteles</span>
+      <span class="industria-tag">Plantas de generación</span>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Calderas Bosch en Video</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="video-grid">
+      <figure>
+        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/Esziog5IcAY" title="Caldera de vapor Universal UL-S Bosch Industrial" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption>Caldera de vapor Universal UL-S Bosch Industrial</figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/bZy7pwSBWfk" title="Experiencia, tecnología y servicios de calidad superior | Bosch Industrial LATAM" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption>Experiencia, tecnología y servicios de calidad superior</figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/RrD744ED8NU" title="Industria de bebidas | Bosch Industrial LATAM" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption>Aplicación en industria de bebidas</figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/JXjjZTMagHU" title="Industria de alimentos | Bosch Industrial LATAM" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption>Aplicación en industria de alimentos</figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/AsCqP5cnfVM" title="Reinventando la generación de calor en procesos industriales" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption>Reinventando la generación de calor en procesos industriales</figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/ZU-vQAWWqOc" title="Fabricación de Calderas Bosch" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption>Fabricación de Calderas Bosch</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué diferencia hay entre una caldera de vapor y una caldera de agua caliente?</summary>
+        <p>La caldera de vapor genera vapor saturado a presión para procesos, esterilización o generación de energía, mientras que la caldera de agua caliente calienta agua para climatización, agua sanitaria o procesos que no requieren vapor. Bosch fabrica ambas familias; SETEC le ayuda a seleccionar la correcta según su aplicación.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué nivel de eficiencia energética ofrecen las calderas Bosch?</summary>
+        <p>Según el modelo, las calderas Bosch alcanzan eficiencias de hasta 95,3% en la línea CSB con economizador, y superiores al 99% en la ELSB eléctrica, gracias a tecnología de tubos helicoidales, intercambiadores de condensación y cámaras de combustión optimizadas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué tipos de combustible pueden usar las calderas Bosch?</summary>
+        <p>Las líneas CSB y UL-S/UL-SX operan con gas natural, diésel, biogás, bioaceite e hidrógeno (hasta 20% en mezcla). La ELSB es 100% eléctrica, sin combustión ni emisiones directas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo toma instalar una caldera industrial Bosch?</summary>
+        <p>El plazo depende de la capacidad, obra civil y disponibilidad de accesorios; SETEC realiza el levantamiento técnico, diseño de sala de calderas y cronograma de instalación como parte del proyecto llave en mano.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué presiones de trabajo manejan los distintos modelos?</summary>
+        <p>La ELSB trabaja hasta 24 bar, la CSB entre 0,5 y 16 bar según variante ND/HD, y la UL-S/UL-SX hasta 30 bar de presión de vapor saturado.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Las calderas Bosch cumplen normativas de emisiones?</summary>
+        <p>Sí. Las cámaras de combustión de gran tamaño y los quemadores optimizados permiten emisiones de NOx por debajo de 50 mg/kWh en la UL-S y de 60 mg/kWh en la CSB, cumpliendo normativas europeas exigentes que superan los estándares locales.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué incluye el mantenimiento con SETEC?</summary>
+        <p>SETEC ofrece mantenimiento preventivo y correctivo, repuestos originales Bosch, soporte técnico local y contratos de mantenimiento programado para maximizar la disponibilidad de su equipo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo modernizar mi caldera actual en lugar de reemplazarla?</summary>
+        <p>En muchos casos sí. SETEC evalúa su instalación y propone medidas de modernización (retrofit) — economizadores, controles inteligentes, recuperación de calor— para mejorar eficiencia y prolongar la vida útil sin necesariamente sustituir el equipo completo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué capacidad de producción de vapor necesito para mi planta?</summary>
+        <p>Depende de la demanda térmica de sus procesos (esterilización, lavandería, cocción, generación eléctrica, etc.). SETEC realiza un análisis de carga térmica para dimensionar el equipo correcto dentro del rango de 300 a 28.000 kg/h que cubre el portafolio Bosch.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿SETEC vende repuestos originales Bosch en Costa Rica?</summary>
+        <p>Sí, como representante autorizado SETEC mantiene disponibilidad de repuestos originales Bosch y soporte técnico local para toda la línea de calderas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Lleve la eficiencia alemana Bosch a su planta</h2>
+    <p>Solicite una asesoría técnica sin costo y reciba una propuesta de ingeniería a la medida de su operación.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Solicitar Cotización</a>
+      <a href="https://api.whatsapp.com/send?phone=70100618" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#25d366;color:#25d366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTONES FLOTANTES -->
+<div class="cb-float">
+  <a href="https://api.whatsapp.com/send?phone=70100618" target="_blank" rel="noopener" class="cb-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="{{ url_for('contacto') }}" class="cb-cotizar" aria-label="Cotizar"><i class="fa fa-file-invoice-dollar"></i></a>
+</div>
+
+<script>
+  document.querySelectorAll('#cb-portfolio-tags [data-cb-tag]').forEach(function (tag) {
+    tag.addEventListener('click', function () {
+      document.querySelectorAll('#cb-portfolio-tags [data-cb-tag]').forEach(function (t) { t.classList.remove('active'); });
+      tag.classList.add('active');
+    });
+  });
+</script>
+
+{% endblock %}

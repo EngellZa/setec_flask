@@ -68,7 +68,7 @@ def set_security_headers(response):
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; "
         "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; "
         "img-src 'self' data:; "
-        "frame-src https://maps.google.com https://www.google.com; "
+        "frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com; "
         "connect-src 'self';"
     )
     return response
@@ -118,6 +118,10 @@ def sistemas_vapor():
 @app.route('/recubrimientos/')
 def recubrimientos():
     return render_template('recubrimientos.html')
+
+@app.route('/calderas-de-vapor-bosch/')
+def calderas_bosch():
+    return render_template('calderas_bosch.html')
 
 # ──────────────────────────────────────────────
 # INSTRUMENTACIÓN ANALÍTICA
@@ -251,6 +255,7 @@ def reembolso():
 @app.route('/trasiego-de-fluidos')
 @app.route('/sistemas-de-vapor-y-agua-caliente')
 @app.route('/recubrimientos')
+@app.route('/calderas-de-vapor-bosch')
 @app.route('/instrumentacion-analitica')
 @app.route('/instrumentacion-analitica/mettler-toledo')
 @app.route('/instrumentacion-analitica/memmert')
