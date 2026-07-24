@@ -27,12 +27,14 @@ gunicorn --bind=0.0.0.0:8000 --chdir setec app:app   # run from repo root instea
 - No test suite, linter, or build step exists in this repo.
 - Config is via `.env` (see `setec/.env.example` for required keys: `SECRET_KEY`, `MAIL_USERNAME`, `MAIL_PASSWORD`, `FLASK_DEBUG`, `DEST_EMAIL`). Never commit a real `.env`.
 - Deployment target is Azure App Service; `Procfile` (repo root) and `setec/startup.txt` both run `gunicorn --chdir setec app:app` — the `--chdir` is required because `app.py` lives inside `setec/`, not the repo root.
+- `requirements.txt` is duplicated at the repo root and in `setec/` (identical contents) — update both when changing dependencies.
 
 ## Architecture
 
 - **Everything is one Flask app** (`setec/app.py`) — routes, security headers, CSRF, rate limiting, and mail sending all live in this single file. There's no blueprint/package split, no ORM, no database.
 - **Routing convention**: every content route is registered twice — once as the canonical path with a trailing slash (e.g. `/sobre-nosotros/`), and once without a trailing slash purely to 301-redirect into the canonical form. The no-slash variants are all stacked as `@app.route` decorators on a single shared `redirect_no_slash` view at the bottom of `app.py` (not a wildcard) — when adding a new page, add both the real route/view and a matching `@app.route('/new-path')` line on that stack.
 - **Templates mirror routes 1:1** under `setec/templates/`, all extending `base.html`. The `instrumentacion_analitica/` subdirectory holds a product-line's landing page plus per-brand pages (Mettler Toledo, Memmert, Scilogex, otras marcas).
+- **`base.html` hardcodes the nav dropdown and footer link columns** with `url_for('<endpoint>')` calls to every page — adding a new route/template also means adding it to the nav and/or footer in `base.html`, or it won't be reachable from the site UI.
 - **Contact form (`/contacto/`) is the only stateful logic**:
   - CSRF token is generated per-session (`generate_csrf`/`validate_csrf` in `app.py`) and rendered via `csrf_token()` (a Jinja global) into a hidden form field — this is a hand-rolled CSRF implementation, not Flask-WTF.
   - A honeypot field (`website`) silently "succeeds" for bots that fill it in.
