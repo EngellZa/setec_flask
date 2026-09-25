@@ -1,10 +1,11 @@
 {% extends "base.html" %}
-{% block title %}Blog – Setec{% endblock %}
+{% block title %}Biblioteca de Vapor – Setec{% endblock %}
 
 {% block content %}
 
 <div class="product-hero product-hero--light">
-  <h1>Blog</h1>
+  <h1>Biblioteca de Vapor SETEC</h1>
+  <p>Guías técnicas y artículos sobre calderas industriales, generación de vapor y sistemas de agua caliente, escritos por el equipo de ingeniería de SETEC.</p>
 </div>
 
 <section style="background:#f5f5f5;padding:3.5rem 1.5rem;">
@@ -12,30 +13,21 @@
     <div class="blog-grid">
 
       <div class="blog-card">
-        <div class="blog-card-body">
-          <p class="category">Lavandería Industrial</p>
-          <h3>
-            <a href="https://www.setec-cr.com/la-importancia-de-la-lavanderia-industrial-mas-que-limpiar-una-pieza-fundamental-en-diversos-sectores-2/" target="_blank">
-              La Importancia de la Lavandería Industrial: Más que Limpiar, una Pieza Fundamental en Diversos Sectores
-            </a>
-          </h3>
-          <p>Explora cómo la lavandería industrial puede procesar grandes volúmenes de ropa de manera eficiente, ahorrando tiempo y recursos en comparación con los métodos convencionales de lavado.</p>
-          <div class="blog-meta">Mayo 16, 2024 &nbsp;·&nbsp; Sin comentarios</div>
-          <a href="https://www.setec-cr.com/la-importancia-de-la-lavanderia-industrial-mas-que-limpiar-una-pieza-fundamental-en-diversos-sectores-2/" target="_blank" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Saber más</a>
+        <div class="blog-card-media">
+          <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-01-sala-calderas.png') }}" alt="Sala de calderas instalada por SETEC" />
+          <span class="blog-card-badge">Fundamentos de las Calderas</span>
         </div>
-      </div>
-
-      <div class="blog-card">
         <div class="blog-card-body">
-          <p class="category">Lavandería Industrial</p>
           <h3>
-            <a href="https://www.setec-cr.com/la-importancia-de-la-lavanderia-industrial-mas-que-limpiar-una-pieza-fundamental-en-diversos-sectores/" target="_blank">
-              La Importancia de la Lavandería Industrial: Más que Limpiar, una Pieza Fundamental en Diversos Sectores
+            <a href="{{ url_for('blog_fundamentos_calderas') }}">
+              Calderas Industriales: Qué Son, Cómo Funcionan y Por Qué Son Clave para la Eficiencia de una Planta
             </a>
           </h3>
-          <p>Explora cómo la lavandería industrial puede procesar grandes volúmenes de ropa de manera eficiente, ahorrando tiempo y recursos en comparación con los métodos convencionales de lavado.</p>
-          <div class="blog-meta">Mayo 14, 2024 &nbsp;·&nbsp; Sin comentarios</div>
-          <a href="https://www.setec-cr.com/la-importancia-de-la-lavanderia-industrial-mas-que-limpiar-una-pieza-fundamental-en-diversos-sectores/" target="_blank" class="btn btn-primary" style="margin-top:1rem;font-size:.85rem;">Saber más</a>
+          <p>Una guía introductoria para entender la generación de vapor industrial, sus principales tecnologías y los factores que determinan su eficiencia.</p>
+          <div class="blog-card-footer">
+            <span class="blog-meta">Artículo 1 &nbsp;·&nbsp; Equipo SETEC</span>
+            <a href="{{ url_for('blog_fundamentos_calderas') }}" class="blog-card-link">Leer más <i class="fa fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 

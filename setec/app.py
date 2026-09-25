@@ -153,6 +153,14 @@ def otras_marcas():
 def blog():
     return render_template('blog.html')
 
+@app.route('/blog/fundamentos-calderas-industriales/')
+def blog_fundamentos_calderas():
+    return render_template('blog_fundamentos_calderas.html')
+
+@app.route('/blog/lavanderia-industrial-hospitalaria/')
+def blog_lavanderia():
+    return render_template('blog_lavanderia.html')
+
 # ──────────────────────────────────────────────
 # CONTACTO
 # ──────────────────────────────────────────────
@@ -262,6 +270,8 @@ def reembolso():
 @app.route('/instrumentacion-analitica/scilogex-2')
 @app.route('/otras-marcas')
 @app.route('/blog')
+@app.route('/blog/fundamentos-calderas-industriales')
+@app.route('/blog/lavanderia-industrial-hospitalaria')
 @app.route('/contacto')
 @app.route('/terminos-y-condiciones')
 @app.route('/politicas-de-privacidad')

@@ -1,0 +1,362 @@
+{% extends "base.html" %}
+{% block title %}Calderas Industriales: Qué Son y Cómo Funcionan – Biblioteca de Vapor SETEC{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Guía introductoria a las calderas industriales: qué son, cómo funcionan, qué tipos existen y qué factores determinan su eficiencia. Artículo 1 de la Biblioteca de Vapor SETEC." />
+<link rel="canonical" href="{{ request.url_root }}blog/fundamentos-calderas-industriales/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Qué es una caldera industrial?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Es un equipo que genera vapor o agua caliente transfiriendo calor a un líquido, normalmente agua, para utilizarlo como fuente de energía térmica en procesos productivos."}},
+    {"@type": "Question", "name": "¿Cuál es la diferencia entre una caldera pirotubular y una acuotubular?",
+     "acceptedAnswer": {"@type": "Answer", "text": "En la pirotubular, los gases calientes circulan por dentro de tubos rodeados de agua. En la acuotubular, el agua circula por dentro de los tubos y los gases calientes por fuera."}},
+    {"@type": "Question", "name": "¿En qué unidades se expresa la capacidad de una caldera de vapor?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Habitualmente en kilogramos de vapor por hora (kg/h), siempre asociados a una presión de operación. La capacidad nominal debe contrastarse con la demanda real del proceso."}},
+    {"@type": "Question", "name": "¿Qué fuentes de energía se utilizan en las calderas en Costa Rica?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Principalmente GLP, diésel y búnker; en algunos casos, biocombustibles. Las calderas eléctricas son otra alternativa: generan vapor sin combustión en el punto de uso."}},
+    {"@type": "Question", "name": "¿Necesita analizar su sistema de generación de vapor?",
+     "acceptedAnswer": {"@type": "Answer", "text": "SETEC puede ayudarle a evaluar las necesidades de su proceso, analizar las condiciones de operación y estudiar alternativas de generación, modernización y eficiencia energética."}}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>Calderas Industriales: Qué Son, Cómo Funcionan y Por Qué Son Clave para la Eficiencia de una Planta</h1>
+  <p>Una guía introductoria para entender la generación de vapor industrial, sus principales tecnologías y los factores que determinan su eficiencia.</p>
+</div>
+
+<section style="background:#fff;padding-bottom:0;">
+  <div class="container article-meta">
+    <p class="eyebrow">Biblioteca de Vapor SETEC · Artículo 1 · Fundamentos de las Calderas Industriales</p>
+    <p class="blog-meta">Equipo SETEC</p>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-01-sala-calderas.png') }}" alt="Sala de calderas instalada por SETEC" />
+    <figcaption>Sala de calderas instalada por SETEC.</figcaption>
+  </div>
+
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>En muchas industrias, el vapor es mucho más que agua convertida en gas. Es una fuente de energía térmica fundamental para procesos como cocción, pasteurización, esterilización, limpieza, secado, calentamiento y diferentes procesos de manufactura.</p>
+    <p>Por eso, cuando una planta depende del vapor para producir, la caldera se convierte en uno de los equipos más importantes de toda la operación. Pero existe una pregunta que muchas veces se deja para después: <strong>¿qué tan eficientemente estamos generando ese vapor?</strong></p>
+    <p>Una caldera puede cumplir su función y, al mismo tiempo, consumir más combustible del necesario, operar fuera de su rango óptimo, requerir más mantenimiento o no estar adecuadamente dimensionada para la demanda real de la planta. Comprender cómo funciona una caldera industrial es el primer paso para entender cómo mejorar un sistema de vapor.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Qué es una caldera industrial?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Una caldera industrial es un equipo diseñado para generar vapor o agua caliente mediante la transferencia de calor hacia un líquido, normalmente agua.</p>
+    <p>La fuente de energía varía según el diseño y la aplicación. En Costa Rica, donde no se dispone de gas natural, las calderas de combustión operan principalmente con gas licuado de petróleo (GLP), diésel o búnker (fuel oil n.º 6), y también existen opciones con biocombustibles. A estas alternativas se suman las tecnologías que generan vapor con energía eléctrica y, en determinadas aplicaciones, con hidrógeno.</p>
+    <p>En términos sencillos, una caldera cumple tres funciones:</p>
+    <ol>
+      <li><strong>Genera calor.</strong> Una fuente de energía —un quemador o un sistema eléctrico— produce el calor necesario.</li>
+      <li><strong>Transfiere ese calor al agua.</strong> El diseño de la caldera aprovecha la energía térmica para elevar la temperatura del agua y producir vapor.</li>
+      <li><strong>Entrega el vapor al proceso.</strong> El vapor se conduce por tuberías hacia los equipos y procesos que necesitan energía térmica.</li>
+    </ol>
+    <p>Sin embargo, una caldera industrial moderna es mucho más que un recipiente donde se calienta agua. Integra sistemas de combustión, transferencia de calor, control, seguridad, alimentación de agua y manejo de combustible y, según la instalación, sistemas de recuperación de energía.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Para qué se utiliza el vapor industrial?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>El vapor tiene una característica que lo hace especialmente útil: permite transportar y transferir una gran cantidad de energía térmica de manera controlada. Por eso se encuentra en industrias muy diferentes, en aplicaciones como:</p>
+    <ul>
+      <li>Generación de energía</li>
+      <li>Calefacción</li>
+      <li>Cocción</li>
+      <li>Pasteurización</li>
+      <li>Destilación</li>
+      <li>Secado, deshidratación y curado</li>
+      <li>Limpieza</li>
+      <li>Esterilización</li>
+      <li>Procesos de manufactura</li>
+      <li>Calentamiento de equipos y procesos</li>
+    </ul>
+    <p>En una planta de alimentos, el vapor puede ser parte esencial de la producción. En un hospital se utiliza para esterilización. En una lavandería industrial aporta el calor que requieren distintas etapas del proceso. La tecnología cambia, pero la necesidad es la misma: <strong>generar y entregar energía térmica de forma segura, confiable y eficiente.</strong></p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Cómo funciona una caldera industrial?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>El principio es sencillo: una fuente de calor eleva la temperatura del agua hasta producir vapor. Detrás de ese principio, sin embargo, interactúan varios sistemas. El proceso básico puede resumirse en seis pasos:</p>
+    <ol>
+      <li><strong>Se suministra energía.</strong> La caldera recibe energía de un combustible o de una fuente eléctrica, según la tecnología utilizada.</li>
+      <li><strong>Se produce calor.</strong> En una caldera de combustión, el quemador mezcla combustible y aire y produce una combustión controlada.</li>
+      <li><strong>El calor se transfiere al agua.</strong> En las calderas de combustión, los gases calientes recorren las superficies de transferencia de calor y ceden su energía al agua.</li>
+      <li><strong>El agua se evapora.</strong> Cuando el agua alcanza la temperatura de saturación correspondiente a la presión de operación, se convierte en vapor. A mayor presión, mayor es la temperatura a la que el agua hierve.</li>
+      <li><strong>El vapor se separa y se distribuye.</strong> El vapor se separa del agua en el espacio de vapor de la caldera y se envía por la red de distribución hacia los puntos de consumo.</li>
+      <li><strong>Los controles mantienen la operación dentro de sus límites.</strong> Sensores, válvulas, sistemas de control y dispositivos de seguridad supervisan variables como presión, temperatura y nivel de agua.</li>
+    </ol>
+    <p style="font-style:italic;color:var(--gray);">En el próximo artículo de esta biblioteca profundizaremos en el proceso térmico: calor sensible, calor latente y calidad del vapor.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Cuáles son las partes principales de una caldera industrial?</h2>
+      <div class="gold-bar"></div>
+      <p>Para entender por qué una caldera puede ser más o menos eficiente, conviene conocer primero sus componentes principales.</p>
+    </div>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-01-como-funciona.jpg') }}" alt="Componentes principales de una caldera industrial de combustión" />
+    <figcaption>Componentes principales de una caldera industrial de combustión.</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <h3>Fuente de calor y quemador</h3>
+    <p>En las calderas de combustión, el quemador genera la llama mediante una mezcla controlada de combustible y aire. La calidad de esa combustión influye directamente en el aprovechamiento de la energía y en las emisiones. Por eso, quemador y caldera deben evaluarse como un mismo sistema, no como equipos independientes.</p>
+    <h3>Cámara de combustión</h3>
+    <p>Es la zona donde se desarrolla la llama y se generan los gases calientes. Su diseño debe permitir una combustión estable y segura y favorecer la transferencia de calor.</p>
+    <h3>Superficies de transferencia de calor</h3>
+    <p>Aquí ocurre una de las partes más importantes del proceso: la energía de los gases calientes debe pasar al agua de la manera más eficiente posible. El diseño de estas superficies, el recorrido de los gases y las condiciones de operación determinan en buena medida el rendimiento térmico de la caldera. Su estado también cuenta: el hollín del lado de los gases y las incrustaciones del lado del agua actúan como aislantes y reducen la transferencia de calor.</p>
+    <h3>Espacio de vapor</h3>
+    <p>Una vez producido, el vapor debe separarse adecuadamente del agua para entregarse al proceso en las condiciones requeridas. La calidad y la estabilidad del vapor son determinantes en muchas aplicaciones industriales.</p>
+    <h3>Control de nivel de agua</h3>
+    <p>El nivel de agua debe mantenerse dentro de límites definidos. Un control adecuado es fundamental tanto para la seguridad como para la operación eficiente del equipo.</p>
+    <h3>Válvulas y dispositivos de seguridad</h3>
+    <p>Las calderas trabajan con agua caliente y, en muchos casos, con vapor a presión. Por eso incorporan dispositivos que protegen el equipo y a las personas ante condiciones anormales, entre ellos las válvulas de seguridad contra sobrepresión.</p>
+    <h3>Sistema de control</h3>
+    <p>Las calderas modernas incorporan instrumentos y sistemas de control que supervisan y regulan las variables de operación. La automatización contribuye a una operación más estable y facilita el monitoreo del sistema.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Tipos de calderas industriales</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>No todas las calderas tienen el mismo diseño. La selección de una tecnología depende de factores como:</p>
+    <ul>
+      <li>La cantidad de vapor requerida</li>
+      <li>La presión de operación</li>
+      <li>El combustible disponible</li>
+      <li>El perfil de demanda</li>
+      <li>El espacio disponible</li>
+      <li>Los requerimientos de eficiencia y de emisiones</li>
+      <li>Las características del proceso</li>
+    </ul>
+    <p>Las configuraciones principales son tres:</p>
+    <h3>Calderas pirotubulares</h3>
+    <p>Los gases calientes de la combustión circulan por el interior de tubos rodeados de agua. También se conocen como calderas de tubos de humo. Son una tecnología ampliamente utilizada en la industria y se fabrican en distintas capacidades y presiones.</p>
+    <h3>Calderas acuotubulares</h3>
+    <p>El agua circula por el interior de los tubos, mientras los gases calientes circulan por fuera. Este principio permite desarrollar soluciones para aplicaciones con requerimientos particulares de presión, temperatura y capacidad.</p>
+    <h3>Configuraciones combinadas</h3>
+    <p>Algunos diseños combinan principios de transferencia de calor de ambos tipos.</p>
+    <p>La elección no debería partir de la pregunta «¿cuál tecnología es mejor?». La pregunta correcta es: <strong>¿cuál tecnología se adapta mejor a las necesidades reales de mi proceso?</strong> Analizaremos las diferencias en detalle en el artículo dedicado a calderas pirotubulares y acuotubulares.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>La capacidad de una caldera no se define solamente por su tamaño</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Uno de los errores más comunes es pensar en una caldera únicamente por sus dimensiones físicas o por su potencia. En sistemas de vapor, la capacidad suele expresarse como cantidad de vapor generado por unidad de tiempo, por ejemplo, en kilogramos de vapor por hora (kg/h). Pero conocer la capacidad nominal no es suficiente. También es necesario conocer:</p>
+    <ul>
+      <li>La presión requerida</li>
+      <li>La temperatura</li>
+      <li>La calidad del vapor</li>
+      <li>La demanda máxima y la demanda promedio</li>
+      <li>Las variaciones de carga</li>
+      <li>Las horas de operación</li>
+      <li>El combustible disponible</li>
+      <li>Las condiciones del agua de alimentación</li>
+      <li>Las necesidades futuras de producción</li>
+    </ul>
+    <p>Una caldera bien seleccionada responde a la <strong>demanda real del proceso</strong>, no a una estimación aproximada. El cálculo de capacidad será tema de un próximo artículo de la Biblioteca de Vapor SETEC.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Una caldera eficiente significa simplemente consumir menos combustible?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>No necesariamente. La eficiencia de una caldera debe analizarse dentro del sistema completo. En el desempeño global de una instalación influyen factores como:</p>
+    <ul>
+      <li>La calidad de la combustión y el exceso de aire</li>
+      <li>La temperatura de los gases de escape</li>
+      <li>La recuperación de calor mediante economizadores</li>
+      <li>El retorno de condensado</li>
+      <li>El aislamiento térmico</li>
+      <li>La calidad del agua y el régimen de purgas</li>
+      <li>El perfil de carga</li>
+      <li>El mantenimiento</li>
+      <li>El control y la automatización</li>
+    </ul>
+    <p>Por eso, al evaluar una caldera nueva, no basta con comparar el precio de compra. La pregunta más importante es: <strong>¿cuánto me costará generar vapor durante toda la vida útil del sistema?</strong></p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>La caldera es solamente una parte del sistema de vapor</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Este concepto es la base de toda la Biblioteca de Vapor. Una planta puede tener una caldera moderna y aun así presentar oportunidades importantes de mejora en otros puntos del sistema. Por eso conviene analizar la instalación como un circuito:</p>
+    <div class="article-flow">Combustible → Combustión → Caldera → Vapor → Distribución → Proceso → Condensado → Retorno a la caldera</div>
+    <p>En paralelo, parte de la energía que todavía llevan los gases de escape puede recuperarse:</p>
+    <div class="article-flow">Gases de escape → Economizador → Precalentamiento del agua de alimentación</div>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-01-sistema-completo.jpg') }}" alt="El sistema completo de generación y utilización de vapor" />
+    <figcaption>El sistema completo de generación y utilización de vapor.</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>Cada etapa puede representar una oportunidad de eficiencia. De ahí una conclusión importante:</p>
+    <div class="article-callout">La eficiencia de una planta no depende únicamente de comprar una caldera eficiente. Depende de diseñar, operar y mantener correctamente todo el sistema de generación y utilización del vapor.</div>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Tecnología Bosch para la generación de vapor</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>A medida que evolucionan las necesidades industriales, también lo hacen las tecnologías de generación de vapor. SETEC representa en Costa Rica las <a href="{{ url_for('calderas_bosch') }}">calderas industriales Bosch</a>, fabricante con una trayectoria en calderas que se remonta a 1865, en tres familias:</p>
+    <ul>
+      <li><strong>CSB</strong> y <strong>UL-S/UL-SX</strong>: calderas pirotubulares de vapor para distintos rangos de capacidad.</li>
+      <li><strong>ELSB</strong>: calderas eléctricas de vapor.</li>
+    </ul>
+    <p>Analizaremos cada familia y su aplicación en próximos artículos de esta biblioteca. Por ahora, un principio es claro: el modelo de caldera nunca debería seleccionarse únicamente por su capacidad nominal. Deben analizarse la demanda del proceso, el combustible, las condiciones de operación, el perfil de carga, la eficiencia requerida y las posibilidades de recuperación de energía. Ese análisis es el que permite pasar de comprar una caldera a diseñar una verdadera solución de generación de vapor.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Qué debemos preguntarnos antes de seleccionar una caldera?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Antes de especificar una caldera industrial, conviene responder al menos estas preguntas:</p>
+    <ul>
+      <li>¿Cuánto vapor necesita realmente mi proceso?</li>
+      <li>¿A qué presión necesito trabajar?</li>
+      <li>¿Cuál es mi perfil de consumo durante el día?</li>
+      <li>¿Qué combustible tengo disponible?</li>
+      <li>¿Cuánto estoy pagando actualmente por generar una tonelada de vapor?</li>
+      <li>¿Cuánta energía estoy perdiendo por los gases de escape?</li>
+      <li>¿Estoy recuperando correctamente el condensado?</li>
+      <li>¿Mi sistema está preparado para futuras necesidades de producción?</li>
+      <li>¿La caldera actual está trabajando en condiciones eficientes?</li>
+    </ul>
+    <p>Estas preguntas son tan importantes como la elección de la marca del equipo.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>SETEC: experiencia real en sistemas de vapor</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>SETEC trabaja desde 1954 en soluciones técnicas para la industria y las instituciones públicas de Costa Rica. En <a href="{{ url_for('sistemas_vapor') }}">sistemas de vapor y agua caliente</a>, acompaña a sus clientes desde el análisis de sus necesidades hasta la instalación, la puesta en marcha y el soporte técnico local. Esa experiencia en campo es la base de esta biblioteca.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>El conocimiento es el primer paso hacia la eficiencia</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>A primera vista, una caldera industrial parece un equipo sencillo: agua, calor y vapor. Pero detrás de ese proceso hay ingeniería térmica, combustión, transferencia de calor, control, seguridad y gestión energética. Cuando el vapor representa una parte importante del proceso productivo, <strong>cada punto de eficiencia puede tener un impacto económico significativo.</strong></p>
+    <p>Por eso, antes de comprar una caldera nueva o sustituir una existente, vale la pena comprender cómo funciona el sistema y dónde están las oportunidades de mejora.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Qué viene después?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Este artículo abre la <strong>Biblioteca de Vapor SETEC</strong>, una serie de contenidos técnicos para profesionales de mantenimiento, ingeniería, producción y operaciones. Cada 15 días publicaremos un nuevo tema, entre ellos:</p>
+    <ul>
+      <li>¿Cómo se genera el vapor industrial?</li>
+      <li>Calderas pirotubulares vs. acuotubulares: ¿cuál conviene a su proceso?</li>
+      <li>¿Cómo calcular la capacidad de una caldera?</li>
+      <li>¿Cuánto cuesta realmente generar vapor?</li>
+      <li>Eficiencia de una caldera industrial: qué significa realmente «alta eficiencia»</li>
+      <li>Pérdidas de energía que encarecen su sistema de vapor</li>
+      <li>Economizadores: cómo recuperar energía de los gases de combustión</li>
+      <li>Retorno de condensado: energía que muchas plantas desperdician</li>
+    </ul>
+    <p>Cada tema profundiza en una parte específica del sistema y ayuda a entender cómo las distintas tecnologías contribuyen a una generación de vapor más eficiente y confiable.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué es una caldera industrial?</summary>
+        <p>Es un equipo que genera vapor o agua caliente transfiriendo calor a un líquido, normalmente agua, para utilizarlo como fuente de energía térmica en procesos productivos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál es la diferencia entre una caldera pirotubular y una acuotubular?</summary>
+        <p>En la pirotubular, los gases calientes circulan por dentro de tubos rodeados de agua. En la acuotubular, el agua circula por dentro de los tubos y los gases calientes por fuera.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿En qué unidades se expresa la capacidad de una caldera de vapor?</summary>
+        <p>Habitualmente en kilogramos de vapor por hora (kg/h), siempre asociados a una presión de operación. La capacidad nominal debe contrastarse con la demanda real del proceso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué fuentes de energía se utilizan en las calderas en Costa Rica?</summary>
+        <p>Principalmente GLP, diésel y búnker; en algunos casos, biocombustibles. Las calderas eléctricas son otra alternativa: generan vapor sin combustión en el punto de uso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesita analizar su sistema de generación de vapor?</summary>
+        <p>SETEC puede ayudarle a evaluar las necesidades de su proceso, analizar las condiciones de operación y estudiar alternativas de generación, modernización y eficiencia energética.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="article-callout" style="background:rgba(255,255,255,.08);border-left-color:var(--white);color:var(--white);text-align:left;max-width:700px;margin:0 auto 2rem;">No se trata solamente de seleccionar una caldera. Se trata de encontrar la solución adecuada para generar el vapor que su proceso necesita.</div>
+    <h2>Hable con nuestro equipo especializado en soluciones industriales de vapor</h2>
+    <p>+506 2257-6464</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Solicitar Asesoría Técnica</a>
+      <a href="https://api.whatsapp.com/send?phone=70100618" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#25d366;color:#25d366;"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 1.5rem 3rem;">
+  <a href="{{ url_for('blog') }}" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Volver a la Biblioteca de Vapor</a>
+</div>
+
+{% endblock %}
