@@ -1,0 +1,288 @@
+{% extends "base.html" %}
+{% block title %}¿Cómo se Genera el Vapor Industrial? Calor Sensible, Calor Latente y Calidad del Vapor – Biblioteca de Vapor SETEC{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Qué ocurre dentro de la caldera cuando el agua se convierte en vapor: calor sensible, calor latente, vapor saturado y calidad del vapor. Artículo 2 de la Biblioteca de Vapor SETEC." />
+<link rel="canonical" href="{{ request.url_root }}blog/como-se-genera-el-vapor-industrial/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Qué es el calor latente del vapor?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Es la energía que absorbe el agua para convertirse en vapor sin cambiar de temperatura, y que el vapor devuelve al condensarse. A presión atmosférica equivale a unos 2.257 kJ por kilogramo (970 BTU por libra)."}},
+    {"@type": "Question", "name": "¿A qué temperatura está el vapor saturado a 7 bar?",
+     "acceptedAnswer": {"@type": "Answer", "text": "A 7 bar manométricos (unos 102 psig), la temperatura de saturación es de aproximadamente 170 °C (338 °F), con referencia a la presión atmosférica al nivel del mar."}},
+    {"@type": "Question", "name": "¿Qué significa que el vapor tenga una calidad de 0,95?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Que el 95 % de su masa es vapor y el 5 % es agua líquida. Ese vapor entrega alrededor de 5 % menos calor latente por kilogramo que el vapor seco a la misma presión."}},
+    {"@type": "Question", "name": "¿Es mejor el vapor sobrecalentado para calentar un proceso?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Por lo general, no. Para el calentamiento de procesos se prefiere el vapor saturado seco, porque entrega su calor latente a temperatura constante y con una transferencia de calor más intensa. El vapor sobrecalentado se reserva para turbinas y aplicaciones específicas."}}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>¿Cómo se Genera el Vapor Industrial? Calor Sensible, Calor Latente y Calidad del Vapor</h1>
+  <p>Qué ocurre dentro de la caldera cuando el agua se convierte en vapor, y por qué la presión, la temperatura y la calidad del vapor determinan cuánta energía llega realmente a su proceso.</p>
+</div>
+
+<section style="background:#fff;padding-bottom:0;">
+  <div class="container article-meta">
+    <p class="eyebrow">Biblioteca de Vapor SETEC · Artículo 2 · Fundamentos del Vapor</p>
+    <p class="blog-meta">Equipo SETEC</p>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-02-caldera-vapor.jpg') }}" alt="Caldera de vapor con su instrumentación en una sala de calderas instalada por SETEC" />
+    <figcaption>Caldera de vapor con su instrumentación en una sala de calderas instalada por SETEC.</figcaption>
+  </div>
+
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>En el <a href="{{ url_for('blog_fundamentos_calderas') }}">primer artículo de la Biblioteca de Vapor</a> vimos qué es una caldera industrial, cuáles son sus partes y por qué la eficiencia depende de todo el sistema. Ahora entramos a la caldera para responder una pregunta más precisa: <strong>¿qué le ocurre al agua para convertirse en vapor y cuánta energía se necesita para lograrlo?</strong></p>
+    <p>La respuesta tiene consecuencias muy prácticas. Explica por qué el vapor es un medio tan eficaz para transportar calor, por qué la presión de operación no es un dato arbitrario y por qué un vapor con gotas de agua entrega menos energía de la que parece.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Del agua fría al vapor: tres etapas</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Cuando se calienta agua a presión constante, el proceso pasa por etapas bien definidas:</p>
+    <ol>
+      <li><strong>Calentamiento del agua (calor sensible).</strong> El agua absorbe energía y su temperatura sube hasta alcanzar la temperatura de saturación, el punto en que empieza a hervir a esa presión.</li>
+      <li><strong>Evaporación (calor latente).</strong> El agua sigue recibiendo energía, pero su temperatura ya no sube: toda esa energía se utiliza para convertirla en vapor. Mientras coexistan agua y vapor, la temperatura permanece constante.</li>
+      <li><strong>Sobrecalentamiento (solo en algunas aplicaciones).</strong> Si al vapor ya formado se le sigue agregando calor en un sobrecalentador, fuera del contacto con el agua, su temperatura vuelve a subir.</li>
+    </ol>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-02-calor-sensible-latente.png') }}" alt="Gráfica de calor sensible y calor latente para 1 kg de agua a presión atmosférica y a 7 bar g" />
+    <figcaption>Calor sensible y calor latente para 1 kg (2,2 lb) de agua a 20 °C (68 °F), a presión atmosférica y a 7 bar g (102 psig).</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>La gráfica muestra algo que suele sorprender. A presión atmosférica, calentar 1 kg (2,2 lb) de agua de 20 °C a 100 °C (68 °F a 212 °F) requiere unos 335 kJ/kg (144 BTU/lb); evaporarla por completo requiere otros 2.257 kJ/kg (970 BTU/lb), casi siete veces más. <strong>La mayor parte de la energía del vapor está en su calor latente.</strong></p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Calor sensible: la energía que marca el termómetro</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>El calor sensible es la energía que eleva la temperatura del agua sin cambiar su estado. Se llama así porque puede medirse con un termómetro. El agua líquida necesita aproximadamente 4,19 kJ por kilogramo para aumentar su temperatura un grado Celsius (1 BTU por libra por grado Fahrenheit).</p>
+    <p>En una caldera, el calor sensible se invierte en llevar el agua de alimentación hasta la temperatura de saturación. Por eso importa la temperatura a la que entra el agua: cuanto más caliente llega, gracias al retorno de condensado o a un economizador, menos combustible se necesita en esta etapa. Ambos temas tendrán su propio artículo en esta biblioteca.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Calor latente: la energía que hace el trabajo</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>El calor latente es la energía necesaria para cambiar de estado, de agua líquida a vapor, sin que cambie la temperatura. Esa energía queda almacenada en el vapor.</p>
+    <p>Lo decisivo para una planta es que el proceso es reversible. Cuando el vapor llega a un intercambiador, una marmita, un autoclave o una secadora, se condensa sobre la superficie más fría y <strong>devuelve su calor latente a temperatura constante</strong>. De ahí sus ventajas como medio de calentamiento:</p>
+    <ul>
+      <li><strong>Mucha energía por kilogramo (libra):</strong> una cantidad relativamente pequeña de vapor transporta una gran cantidad de calor.</li>
+      <li><strong>Temperatura estable y controlable:</strong> el calor se entrega a la temperatura de saturación, que se regula mediante la presión.</li>
+      <li><strong>Transferencia de calor intensa:</strong> la condensación transfiere calor de forma muy eficaz a las superficies de intercambio.</li>
+    </ul>
+    <p>Una vez condensado, el condensado todavía conserva calor sensible. Aprovecharlo es el tema central del artículo sobre retorno de condensado.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>La presión define la temperatura: el vapor saturado</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>El agua no hierve siempre a 100 °C (212 °F): esa es su temperatura de ebullición a presión atmosférica al nivel del mar. Al aumentar la presión, aumenta también la temperatura a la que hierve. A cada presión le corresponde una única <strong>temperatura de saturación</strong>, y el vapor en equilibrio con el agua a esa presión se llama <strong>vapor saturado</strong>.</p>
+    <p>La tabla siguiente muestra valores de referencia para presiones de operación habituales en la industria:</p>
+  </div>
+  <div class="container" style="max-width:900px;">
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Presión, bar g<br>(psig)</th>
+            <th>Temperatura de saturación, °C (°F)</th>
+            <th>Calor sensible h<sub>f</sub>, kJ/kg (BTU/lb)</th>
+            <th>Calor latente h<sub>fg</sub>, kJ/kg (BTU/lb)</th>
+            <th>Energía total h<sub>g</sub>, kJ/kg (BTU/lb)</th>
+            <th>Volumen específico, m³/kg (ft³/lb)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0 (0)</td><td>100,0 (212,0)</td><td>419 (180)</td><td>2.257 (970)</td><td>2.676 (1.150)</td><td>1,673 (26,80)</td></tr>
+          <tr><td>3 (44)</td><td>143,7 (290,7)</td><td>605 (260)</td><td>2.133 (917)</td><td>2.738 (1.177)</td><td>0,461 (7,38)</td></tr>
+          <tr><td>5 (73)</td><td>158,9 (318,1)</td><td>671 (288)</td><td>2.085 (897)</td><td>2.756 (1.185)</td><td>0,315 (5,04)</td></tr>
+          <tr><td>7 (102)</td><td>170,5 (338,9)</td><td>721 (310)</td><td>2.047 (880)</td><td>2.768 (1.190)</td><td>0,240 (3,84)</td></tr>
+          <tr><td>10 (145)</td><td>184,1 (363,4)</td><td>781 (336)</td><td>1.999 (860)</td><td>2.781 (1.195)</td><td>0,177 (2,84)</td></tr>
+          <tr><td>12 (174)</td><td>191,7 (377,0)</td><td>815 (350)</td><td>1.972 (848)</td><td>2.787 (1.198)</td><td>0,151 (2,42)</td></tr>
+          <tr><td>15 (218)</td><td>201,4 (394,6)</td><td>859 (369)</td><td>1.934 (832)</td><td>2.793 (1.201)</td><td>0,124 (1,98)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--gray);font-style:italic;margin-top:.6rem;">Vapor saturado seco. Presión atmosférica de referencia: 1,013 bar (14,7 psia), nivel del mar. Entalpías referidas a agua a 0 °C (32 °F). Entre paréntesis, unidades del sistema inglés. Fuente: cálculo con la formulación IAPWS-IF97.</p>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>De la tabla se desprenden tres conclusiones prácticas:</p>
+    <ol>
+      <li><strong>A mayor presión, mayor temperatura.</strong> Si un proceso necesita una superficie de calentamiento a unos 150 °C (302 °F), el vapor debe llegar al equipo a unos 4 bar g (58 psig), cuya temperatura de saturación ronda los 152 °C (306 °F). La presión de operación se define a partir de la temperatura que requiere el proceso.</li>
+      <li><strong>A mayor presión, menor calor latente.</strong> A 10 bar g (145 psig), cada kilogramo de vapor entrega unos 1.999 kJ (860 BTU/lb) al condensarse, frente a 2.257 kJ (970 BTU/lb) a presión atmosférica. Generar a una presión mayor que la necesaria no aporta más calor útil por kilogramo, y la caldera y las tuberías trabajan a mayor temperatura, con más pérdidas térmicas.</li>
+      <li><strong>A mayor presión, menor volumen.</strong> A 10 bar g (145 psig), el vapor ocupa unas nueve veces menos espacio que a presión atmosférica: 0,177 frente a 1,673 m³/kg (2,84 frente a 26,8 ft³/lb). Por eso es habitual generar y distribuir a una presión más alta, con tuberías de menor diámetro, y reducirla cerca del punto de consumo.</li>
+    </ol>
+    <p><strong>Un detalle para Costa Rica:</strong> los manómetros miden la presión relativa a la atmósfera local, mientras que las tablas de vapor suelen construirse con la presión atmosférica al nivel del mar. En el Valle Central, por encima de los 1.000 m (3.280 ft) de altitud, la presión atmosférica es menor; en San José, a unos 1.150 m (3.770 ft), el agua hierve alrededor de 96 °C (205 °F). En la mayoría de los cálculos industriales la diferencia es pequeña, pero conviene tenerla presente cuando se verifican temperaturas de proceso con precisión.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Vapor saturado, húmedo y sobrecalentado</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <h3>Vapor saturado seco</h3>
+    <p>Es vapor a la temperatura de saturación, sin gotas de agua. Es el vapor ideal para la mayoría de los procesos de calentamiento, porque entrega todo su calor latente a temperatura estable.</p>
+    <h3>Vapor húmedo</h3>
+    <p>Es vapor saturado que arrastra gotas de agua. Tiene la misma temperatura que el vapor seco a esa presión, pero transporta menos energía por kilogramo. En la práctica es el caso más frecuente, y su contenido de agua es lo que mide la calidad del vapor.</p>
+    <h3>Vapor sobrecalentado</h3>
+    <p>Es vapor calentado por encima de su temperatura de saturación. No contiene agua, pero en los intercambiadores cede su energía con menos eficacia: primero debe enfriarse hasta la saturación antes de condensarse. Se utiliza sobre todo en turbinas y en aplicaciones específicas; para el calentamiento de procesos, la opción habitual es el vapor saturado.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Calidad del vapor: la fracción de sequedad</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>La calidad del vapor se expresa mediante la <strong>fracción de sequedad (x)</strong>: la proporción, en masa, de vapor dentro de la mezcla de vapor y agua. Un vapor con x = 0,95 contiene 95 % de vapor y 5 % de agua líquida.</p>
+    <p>Ese 5 % de agua no aporta calor latente. A 7 bar g (102 psig), cada kilogramo de vapor seco entrega unos 2.047 kJ (880 BTU/lb) al condensarse; con x = 0,95 entrega unos 1.945 kJ (836 BTU/lb), alrededor de 5 % menos. Para entregar el mismo calor, el proceso necesita más kilogramos de vapor, y el agua arrastrada debe drenarse de la red.</p>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-02-calidad-vapor.png') }}" alt="Gráfica del calor latente útil por kilogramo de vapor a 7 bar g según su fracción de sequedad" />
+    <figcaption>Calor latente útil por kilogramo de vapor a 7 bar g (102 psig) según su fracción de sequedad.</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>La energía no es el único problema. El vapor húmedo también:</p>
+    <ul>
+      <li>Forma una película de agua sobre las superficies de intercambio que dificulta la transferencia de calor y alarga los tiempos de proceso.</li>
+      <li>Provoca erosión en válvulas, tuberías y accesorios.</li>
+      <li>Favorece los golpes de ariete cuando el agua se acumula en la red.</li>
+      <li>Puede comprometer procesos críticos: en esterilización, la humedad afecta la penetración del vapor y puede dejar cargas mojadas.</li>
+    </ul>
+    <p>Por eso algunas aplicaciones fijan límites explícitos. La norma europea EN 285, aplicable a los esterilizadores de vapor grandes, exige que el vapor de suministro tenga un valor de sequedad no inferior a 0,95.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Por qué el vapor sale húmedo de una caldera?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Ninguna caldera entrega vapor perfectamente seco, pero una caldera bien operada entrega vapor de buena calidad. Las causas más comunes del exceso de humedad son:</p>
+    <ul>
+      <li><strong>Arrastre de agua.</strong> Un nivel de agua demasiado alto o un pico brusco de demanda hacen que el agua salga junto con el vapor. Cuando la demanda sube de golpe, la presión cae, el agua hierve con violencia y su nivel se eleva.</li>
+      <li><strong>Espumación.</strong> Una concentración alta de sólidos disueltos en el agua de la caldera, o la presencia de contaminantes, genera espuma que el vapor arrastra. Se controla con tratamiento de agua y un régimen de purgas adecuado.</li>
+      <li><strong>Operación por debajo de la presión de diseño.</strong> A menor presión, el vapor ocupa más volumen y sale de la caldera a mayor velocidad, lo que favorece el arrastre de gotas.</li>
+      <li><strong>Condensación en la red.</strong> Las tuberías mal aisladas o sin drenajes adecuados condensan vapor en el camino, y ese condensado viaja con el vapor si no se separa y se drena.</li>
+    </ul>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Qué conviene revisar en su planta</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Estos conceptos se traducen en preguntas concretas:</p>
+    <ul>
+      <li>¿La presión de operación responde a la temperatura que necesita el proceso, o se fijó por costumbre?</li>
+      <li>¿El nivel de agua de la caldera se mantiene estable ante los cambios de demanda?</li>
+      <li>¿Hay picos bruscos de consumo que provocan caídas de presión?</li>
+      <li>¿El tratamiento de agua y las purgas mantienen los sólidos disueltos dentro de los límites que indica el fabricante?</li>
+      <li>¿La red cuenta con separadores de humedad, trampas de vapor y aislamiento en buen estado?</li>
+      <li>¿Los procesos críticos, como la esterilización, cuentan con verificaciones periódicas de la calidad del vapor?</li>
+    </ul>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Qué viene después?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Ya sabemos qué ocurre con el agua dentro de la caldera. En el próximo artículo de la <strong>Biblioteca de Vapor SETEC</strong> compararemos las dos grandes familias de calderas, <strong>pirotubulares y acuotubulares</strong>: cómo se diferencian en su diseño y qué implica cada una para su proceso.</p>
+    <p>Si aún no lo ha leído, le recomendamos comenzar por el primer artículo: <a href="{{ url_for('blog_fundamentos_calderas') }}">Calderas industriales: qué son, cómo funcionan y por qué son clave para la eficiencia de una planta</a>.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Necesita revisar la calidad del vapor en su planta?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>SETEC, empresa costarricense fundada en 1954 y especializada en <a href="{{ url_for('sistemas_vapor') }}">sistemas de vapor y agua caliente</a>, puede ayudarle a revisar las condiciones de generación y distribución de vapor de su planta: la presión de operación, el tratamiento de agua y los puntos donde se pierden calidad o energía.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué es el calor latente del vapor?</summary>
+        <p>Es la energía que absorbe el agua para convertirse en vapor sin cambiar de temperatura, y que el vapor devuelve al condensarse. A presión atmosférica equivale a unos 2.257 kJ por kilogramo (970 BTU por libra).</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿A qué temperatura está el vapor saturado a 7 bar?</summary>
+        <p>A 7 bar manométricos (unos 102 psig), la temperatura de saturación es de aproximadamente 170 °C (338 °F), con referencia a la presión atmosférica al nivel del mar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué significa que el vapor tenga una calidad de 0,95?</summary>
+        <p>Que el 95 % de su masa es vapor y el 5 % es agua líquida. Ese vapor entrega alrededor de 5 % menos calor latente por kilogramo que el vapor seco a la misma presión.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Es mejor el vapor sobrecalentado para calentar un proceso?</summary>
+        <p>Por lo general, no. Para el calentamiento de procesos se prefiere el vapor saturado seco, porque entrega su calor latente a temperatura constante y con una transferencia de calor más intensa. El vapor sobrecalentado se reserva para turbinas y aplicaciones específicas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="article-callout" style="background:rgba(255,255,255,.08);border-left-color:var(--white);color:var(--white);text-align:left;max-width:700px;margin:0 auto 2rem;">Generar vapor es solo la mitad del trabajo. La otra mitad es que llegue al proceso con la presión, la temperatura y la calidad que el proceso necesita.</div>
+    <h2>Hable con nuestro equipo especializado en soluciones industriales de vapor</h2>
+    <p>+506 2257-6464</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Solicitar Asesoría Técnica</a>
+      <a href="https://api.whatsapp.com/send?phone=70100618" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#25d366;color:#25d366;"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 1.5rem 3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+  <a href="{{ url_for('blog_fundamentos_calderas') }}" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Artículo 1: Calderas Industriales</a>
+  <a href="{{ url_for('blog') }}" class="btn btn-outline"><i class="fa fa-book"></i> Volver a la Biblioteca de Vapor</a>
+</div>
+
+{% endblock %}

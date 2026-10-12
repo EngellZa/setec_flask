@@ -68,7 +68,7 @@ def set_security_headers(response):
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; "
         "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; "
         "img-src 'self' data:; "
-        "frame-src https://maps.google.com https://www.google.com; "
+        "frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com; "
         "connect-src 'self';"
     )
     return response
@@ -119,6 +119,10 @@ def sistemas_vapor():
 def recubrimientos():
     return render_template('recubrimientos.html')
 
+@app.route('/calderas-de-vapor-bosch/')
+def calderas_bosch():
+    return render_template('calderas_bosch.html')
+
 # ──────────────────────────────────────────────
 # INSTRUMENTACIÓN ANALÍTICA
 # ──────────────────────────────────────────────
@@ -148,6 +152,18 @@ def otras_marcas():
 @app.route('/blog/')
 def blog():
     return render_template('blog.html')
+
+@app.route('/blog/fundamentos-calderas-industriales/')
+def blog_fundamentos_calderas():
+    return render_template('blog_fundamentos_calderas.html')
+
+@app.route('/blog/como-se-genera-el-vapor-industrial/')
+def blog_generacion_vapor():
+    return render_template('blog_generacion_vapor.html')
+
+@app.route('/blog/lavanderia-industrial-hospitalaria/')
+def blog_lavanderia():
+    return render_template('blog_lavanderia.html')
 
 # ──────────────────────────────────────────────
 # CONTACTO
@@ -251,12 +267,16 @@ def reembolso():
 @app.route('/trasiego-de-fluidos')
 @app.route('/sistemas-de-vapor-y-agua-caliente')
 @app.route('/recubrimientos')
+@app.route('/calderas-de-vapor-bosch')
 @app.route('/instrumentacion-analitica')
 @app.route('/instrumentacion-analitica/mettler-toledo')
 @app.route('/instrumentacion-analitica/memmert')
 @app.route('/instrumentacion-analitica/scilogex-2')
 @app.route('/otras-marcas')
 @app.route('/blog')
+@app.route('/blog/fundamentos-calderas-industriales')
+@app.route('/blog/como-se-genera-el-vapor-industrial')
+@app.route('/blog/lavanderia-industrial-hospitalaria')
 @app.route('/contacto')
 @app.route('/terminos-y-condiciones')
 @app.route('/politicas-de-privacidad')
