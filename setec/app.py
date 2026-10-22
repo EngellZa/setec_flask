@@ -161,6 +161,10 @@ def blog_fundamentos_calderas():
 def blog_generacion_vapor():
     return render_template('blog_generacion_vapor.html')
 
+@app.route('/blog/calderas-pirotubulares-vs-acuotubulares/')
+def blog_pirotubulares_acuotubulares():
+    return render_template('blog_pirotubulares_acuotubulares.html')
+
 @app.route('/blog/lavanderia-industrial-hospitalaria/')
 def blog_lavanderia():
     return render_template('blog_lavanderia.html')
@@ -276,6 +280,7 @@ def reembolso():
 @app.route('/blog')
 @app.route('/blog/fundamentos-calderas-industriales')
 @app.route('/blog/como-se-genera-el-vapor-industrial')
+@app.route('/blog/calderas-pirotubulares-vs-acuotubulares')
 @app.route('/blog/lavanderia-industrial-hospitalaria')
 @app.route('/contacto')
 @app.route('/terminos-y-condiciones')

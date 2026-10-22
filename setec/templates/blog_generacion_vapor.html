@@ -224,7 +224,7 @@
     </div>
   </div>
   <div class="container article-body">
-    <p>Ya sabemos qué ocurre con el agua dentro de la caldera. En el próximo artículo de la <strong>Biblioteca de Vapor SETEC</strong> compararemos las dos grandes familias de calderas, <strong>pirotubulares y acuotubulares</strong>: cómo se diferencian en su diseño y qué implica cada una para su proceso.</p>
+    <p>Ya sabemos qué ocurre con el agua dentro de la caldera. En el próximo artículo de la <strong>Biblioteca de Vapor SETEC</strong> compararemos las dos grandes familias de calderas, <a href="{{ url_for('blog_pirotubulares_acuotubulares') }}"><strong>pirotubulares y acuotubulares</strong></a>: cómo se diferencian en su diseño y qué implica cada una para su proceso.</p>
     <p>Si aún no lo ha leído, le recomendamos comenzar por el primer artículo: <a href="{{ url_for('blog_fundamentos_calderas') }}">Calderas industriales: qué son, cómo funcionan y por qué son clave para la eficiencia de una planta</a>.</p>
   </div>
 
@@ -283,6 +283,7 @@
 <div style="text-align:center;padding:2rem 1.5rem 3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
   <a href="{{ url_for('blog_fundamentos_calderas') }}" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Artículo 1: Calderas Industriales</a>
   <a href="{{ url_for('blog') }}" class="btn btn-outline"><i class="fa fa-book"></i> Volver a la Biblioteca de Vapor</a>
+  <a href="{{ url_for('blog_pirotubulares_acuotubulares') }}" class="btn btn-outline">Artículo 3: Pirotubulares vs. Acuotubulares <i class="fa fa-arrow-right"></i></a>
 </div>
 
 {% endblock %}

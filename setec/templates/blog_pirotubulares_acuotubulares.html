@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% block title %}Calderas Pirotubulares vs. Acuotubulares: Diferencias y Cómo Elegir – Biblioteca de Vapor SETEC{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Qué distingue a las calderas pirotubulares de las acuotubulares, en qué aplicaciones rinde mejor cada una y cinco preguntas para elegir. Artículo 3 de la Biblioteca de Vapor SETEC." />
+<link rel="canonical" href="{{ request.url_root }}blog/calderas-pirotubulares-vs-acuotubulares/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Cuál es la diferencia entre una caldera pirotubular y una acuotubular?",
+     "acceptedAnswer": {"@type": "Answer", "text": "En la pirotubular, los gases calientes circulan por dentro de tubos rodeados de agua. En la acuotubular, el agua circula por dentro de los tubos y los gases calientes por fuera. Esa diferencia define sus límites de presión, su contenido de agua y su comportamiento ante la demanda."}},
+    {"@type": "Question", "name": "¿Cuál es mejor, una caldera pirotubular o una acuotubular?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Ninguna es mejor en términos absolutos. Para la mayoría de los procesos industriales con vapor saturado a presiones moderadas, la pirotubular suele ser la opción más económica y sencilla. La acuotubular es preferible para presiones y capacidades muy altas, vapor sobrecalentado o combustibles sólidos."}},
+    {"@type": "Question", "name": "¿Hasta qué presión puede trabajar una caldera pirotubular?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Según Bosch, los modelos pirotubulares de mayor tamaño alcanzan presiones de hasta unos 30 bar (435 psi). Por encima de ese rango, la tecnología habitual es la acuotubular."}},
+    {"@type": "Question", "name": "¿Por qué una caldera acuotubular exige agua de mejor calidad?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Porque contiene menos agua y sus tubos de diámetro pequeño reciben un flujo de calor intenso. Cualquier incrustación o depósito interno afecta con rapidez la transferencia de calor y puede sobrecalentar los tubos."}}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>Calderas Pirotubulares vs. Acuotubulares: Diferencias y Cómo Elegir</h1>
+  <p>Dos principios de diseño, dos maneras de generar vapor. Qué distingue a cada una, en qué aplicaciones rinde mejor y qué preguntas conviene responder antes de elegir.</p>
+</div>
+
+<section style="background:#fff;padding-bottom:0;">
+  <div class="container article-meta">
+    <p class="eyebrow">Biblioteca de Vapor SETEC · Artículo 3 · Tipos de Calderas Industriales</p>
+    <p class="blog-meta">Equipo SETEC</p>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-03-calderas-pirotubulares-bosch.jpg') }}" alt="Dos calderas pirotubulares de vapor Bosch con sus quemadores en una sala de calderas" />
+    <figcaption>Calderas pirotubulares de vapor. Imagen: Bosch Industrial.</figcaption>
+  </div>
+
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>En el <a href="{{ url_for('blog_fundamentos_calderas') }}">primer artículo de la Biblioteca de Vapor</a> vimos qué es una caldera industrial y cuáles son sus partes. En el <a href="{{ url_for('blog_generacion_vapor') }}">segundo</a> explicamos qué le ocurre al agua para convertirse en vapor y por qué la presión, la temperatura y la calidad del vapor determinan la energía útil. Ahora damos el siguiente paso: <strong>comparar las dos grandes familias de calderas de combustión, las pirotubulares y las acuotubulares.</strong></p>
+    <p>La elección entre una y otra no se nota el primer día. Se nota con los años: en el tratamiento de agua que exige, en la forma en que responde a los picos de demanda, en el tiempo y el costo de su mantenimiento y en el espacio que ocupa en la planta.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>La diferencia de fondo: dónde va el agua y dónde van los gases</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Ambas calderas cumplen la misma función, pero la resuelven de manera opuesta:</p>
+    <ul>
+      <li><strong>En la caldera pirotubular</strong> (también llamada de tubos de humo), los gases calientes de la combustión circulan por dentro de los tubos, y estos están sumergidos en el agua contenida en un gran casco cilíndrico.</li>
+      <li><strong>En la caldera acuotubular</strong> (o de tubos de agua), es el agua la que circula por dentro de los tubos, mientras los gases calientes los rodean por fuera. Los tubos se conectan a uno o varios tambores donde se separa el vapor.</li>
+    </ul>
+    <p>De esta diferencia se deriva casi todo lo demás. En una pirotubular, la presión del vapor actúa sobre un casco de gran diámetro; como el esfuerzo en la pared crece con el diámetro, la presión de diseño tiene un límite práctico. En una acuotubular, la presión actúa sobre tubos de diámetro pequeño, que pueden soportar presiones mucho más altas. Por eso las acuotubulares dominan cuando se requieren presiones, temperaturas o capacidades muy elevadas.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>La caldera pirotubular</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-03-caldera-pirotubular.jpg') }}" alt="Infografía de una caldera pirotubular: quemador, cámara de combustión, tubos de humo, agua, cámara de vapor y sistema de control" />
+    <figcaption>Caldera pirotubular: los gases calientes circulan por dentro de los tubos.</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>En una caldera pirotubular, el quemador produce la llama dentro de un hogar o cámara de combustión que está rodeado de agua. Los gases calientes recorren después uno o varios pasos de tubos, cediendo su energía al agua, antes de salir por la chimenea. El vapor se acumula en la parte superior del casco y desde ahí se envía al proceso.</p>
+    <p>Es la tecnología más extendida en la industria de proceso: plantas de alimentos y bebidas, hospitales, lavanderías industriales, industria farmacéutica y química, entre otras. Según Bosch, los modelos pirotubulares de mayor tamaño alcanzan hasta 55 t/h (121.000 lb/h) de vapor y presiones de hasta 30 bar (435 psi), e incluso vapor sobrecalentado de hasta 300 °C (572 °F). Para la gran mayoría de los procesos de calentamiento, que trabajan con vapor saturado a presiones moderadas, estos rangos son más que suficientes.</p>
+    <p>Su gran volumen de agua es su rasgo más característico. Funciona como un acumulador de energía: cuando la demanda sube de golpe, el agua caliente cede parte de su energía y la presión se mantiene estable. Es una ventaja importante en procesos por lotes, como autoclaves, marmitas o lavanderías, donde el consumo cambia bruscamente.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>La caldera acuotubular</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-03-caldera-acuotubular.jpg') }}" alt="Infografía de una caldera acuotubular: quemador, cámara de combustión, tubos de agua, haz de tubos, tambor de vapor y sistema de control" />
+    <figcaption>Caldera acuotubular: el agua circula por dentro de los tubos.</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>En una caldera acuotubular, el agua circula por un conjunto de tubos que forman las paredes del hogar y los haces de intercambio. Los gases calientes recorren el exterior de esos tubos y les transfieren su energía. La mezcla de agua y vapor sube hacia el tambor superior, donde el vapor se separa y sale hacia el proceso.</p>
+    <p>Como los tubos pueden disponerse con gran libertad, el hogar puede diseñarse con la forma y el tamaño que requiera el combustible. Por eso las acuotubulares son la opción habitual para combustibles sólidos, como la biomasa o el carbón, para la generación de electricidad con turbinas de vapor y para los grandes complejos industriales. En Costa Rica, un ejemplo conocido son los ingenios azucareros, que generan vapor quemando el bagazo de la caña.</p>
+    <p>Esta tecnología no tiene un límite práctico de presión comparable al de las pirotubulares. Bosch recuerda que ya en 1927 una caldera acuotubular producía 30 t/h (66.000 lb/h) de vapor a 180 bar (2.611 psi) y 450 °C (842 °F), y que las calderas supercríticas actuales superan los 350 bar (5.076 psi) y los 600 °C (1.112 °F).</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Comparación lado a lado</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>La siguiente tabla resume las diferencias más relevantes para una planta industrial:</p>
+  </div>
+  <div class="container" style="max-width:900px;">
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th>Pirotubular</th>
+            <th>Acuotubular</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Principio</td><td>Los gases calientes circulan por dentro de los tubos; el agua los rodea dentro de un casco.</td><td>El agua circula por dentro de los tubos; los gases calientes circulan por fuera.</td></tr>
+          <tr><td>Presión y capacidad</td><td>Hasta unos 30 bar (435 psi) y 55 t/h (121.000 lb/h) en los modelos más grandes, según Bosch.</td><td>Sin un límite práctico equivalente: es la tecnología de las grandes centrales, con presiones de cientos de bar.</td></tr>
+          <tr><td>Contenido de agua</td><td>Alto.</td><td>Bajo.</td></tr>
+          <tr><td>Respuesta a picos de demanda</td><td>Muy estable: el volumen de agua amortigua las variaciones de presión y carga.</td><td>Más sensible a las fluctuaciones de presión y carga del proceso.</td></tr>
+          <tr><td>Arranque desde frío</td><td>Más lento: hay más agua que calentar.</td><td>Más rápido: hay menos agua que calentar.</td></tr>
+          <tr><td>Calidad del agua</td><td>Más tolerante, aunque siempre requiere tratamiento.</td><td>Más exigente: necesita agua de baja salinidad.</td></tr>
+          <tr><td>Limpieza e inspección</td><td>Fácil de limpiar; inspección y prueba hidrostática, rara vez ensayos adicionales.</td><td>Mantenimiento más costoso; suele requerir mediciones por ultrasonido además de la prueba hidrostática.</td></tr>
+          <tr><td>Carga parcial</td><td>El quemador modula y puede apagarse sin problema por debajo de la carga mínima.</td><td>Algunos diseños limitan la operación a carga parcial y el quemador no puede apagarse libremente.</td></tr>
+          <tr><td style="white-space:normal;">Combustibles sólidos (biomasa, carbón)</td><td>Uso limitado.</td><td>Adecuada: el hogar puede diseñarse con la forma y el tamaño necesarios.</td></tr>
+          <tr><td>Costo, espacio y plazos</td><td>Menor costo, menos espacio, entrega y montaje más cortos.</td><td>Mayor costo, más espacio, entrega y montaje más prolongados.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--gray);font-style:italic;margin-top:.6rem;">Elaboración de SETEC con base en la comparación publicada por Bosch Industrial y en principios generales de diseño de calderas. Las diferencias son generales: cada modelo y cada aplicación deben evaluarse en particular.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Lo que una tabla no dice: matices importantes</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <ul>
+      <li><strong>La eficiencia depende de más que el tipo de caldera.</strong> Bosch señala que las pirotubulares suelen ofrecer un mayor rendimiento y que lo mantienen con facilidad durante la operación. En la práctica, la eficiencia real de cualquier caldera depende también del ajuste de la combustión, de la recuperación de calor, del perfil de carga y del mantenimiento. Lo analizaremos en el artículo dedicado a la eficiencia.</li>
+      <li><strong>Mucha agua tiene dos caras.</strong> El gran volumen de agua de una pirotubular estabiliza la presión, pero también implica arranques más lentos y más energía almacenada en el equipo. Una acuotubular arranca y responde más rápido, pero tolera peor los cambios bruscos de demanda.</li>
+      <li><strong>La calidad del agua no es opcional en ninguna de las dos.</strong> Que la pirotubular sea más tolerante a la salinidad no significa que pueda operar sin tratamiento de agua: las incrustaciones y la corrosión afectan a ambas tecnologías. La acuotubular simplemente exige un tratamiento más estricto.</li>
+      <li><strong>El combustible puede decidir por usted.</strong> Con GLP, diésel o búnker, que son los combustibles habituales en Costa Rica, la pirotubular suele ser la opción natural. Con biomasa u otros combustibles sólidos, la acuotubular es casi siempre la respuesta.</li>
+    </ul>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Cómo elegir: cinco preguntas antes de decidir</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>La pregunta correcta no es cuál tecnología es mejor, sino cuál se adapta mejor a su proceso. Estas cinco preguntas orientan la decisión:</p>
+    <ol>
+      <li><strong>¿Qué presión y temperatura necesita realmente el proceso?</strong> Como vimos en el <a href="{{ url_for('blog_generacion_vapor') }}">artículo sobre la generación de vapor</a>, la presión de operación se define a partir de la temperatura que requiere el proceso. Si se trata de vapor saturado a presiones moderadas, una pirotubular suele ser suficiente; presiones o temperaturas muy altas, o vapor sobrecalentado para turbinas, apuntan a una acuotubular.</li>
+      <li><strong>¿Cuánto vapor necesita y cómo varía la demanda?</strong> Las demandas con picos bruscos favorecen el gran volumen de agua de una pirotubular. Los caudales muy grandes favorecen una acuotubular.</li>
+      <li><strong>¿Qué combustible tiene disponible?</strong> Los combustibles líquidos y el GLP se adaptan bien a ambas; los sólidos, a la acuotubular.</li>
+      <li><strong>¿Qué calidad de agua puede garantizar de forma sostenida?</strong> Si el tratamiento de agua es limitado, la exigencia de una acuotubular puede convertirse en un riesgo operativo.</li>
+      <li><strong>¿Con qué espacio, plazo y presupuesto cuenta?</strong> Una pirotubular ocupa menos espacio, se entrega e instala en menos tiempo y requiere una inversión menor en las capacidades en que ambas tecnologías compiten.</li>
+    </ol>
+    <p>Existe además una tercera vía para ciertas aplicaciones: las calderas eléctricas, que generan vapor sin combustión en el punto de uso. Las abordaremos en un artículo posterior de esta biblioteca.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Las calderas que SETEC representa</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>En Costa Rica, SETEC representa las <a href="{{ url_for('calderas_bosch') }}">calderas industriales Bosch</a> de las familias CSB y UL-S/UL-SX, ambas pirotubulares, y la ELSB, de generación eléctrica de vapor. Presentaremos cada familia y sus aplicaciones en próximos artículos de la Biblioteca de Vapor. Antes de recomendar un equipo, nuestro punto de partida es siempre el mismo: entender la demanda real de vapor de su proceso.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Qué viene después?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Una vez elegida la tecnología, la siguiente pregunta es qué capacidad de caldera necesita su planta. En el próximo artículo de la <strong>Biblioteca de Vapor SETEC</strong> explicaremos <strong>cómo calcular la capacidad de una caldera</strong>: kilogramos de vapor por hora, presión de operación y perfil de demanda.</p>
+    <p>Si aún no los ha leído, le recomendamos los artículos anteriores: <a href="{{ url_for('blog_fundamentos_calderas') }}">Calderas industriales: qué son, cómo funcionan y por qué son clave para la eficiencia de una planta</a> y <a href="{{ url_for('blog_generacion_vapor') }}">¿Cómo se genera el vapor industrial?</a>.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Está evaluando una caldera nueva o el reemplazo de la actual?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>SETEC, empresa costarricense fundada en 1954 y especializada en <a href="{{ url_for('sistemas_vapor') }}">sistemas de vapor y agua caliente</a>, puede ayudarle a analizar la demanda de su proceso, la presión requerida, el combustible y las condiciones de su sala de calderas para definir la tecnología más adecuada.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuál es la diferencia entre una caldera pirotubular y una acuotubular?</summary>
+        <p>En la pirotubular, los gases calientes circulan por dentro de tubos rodeados de agua. En la acuotubular, el agua circula por dentro de los tubos y los gases calientes por fuera. Esa diferencia define sus límites de presión, su contenido de agua y su comportamiento ante la demanda.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál es mejor, una caldera pirotubular o una acuotubular?</summary>
+        <p>Ninguna es mejor en términos absolutos. Para la mayoría de los procesos industriales con vapor saturado a presiones moderadas, la pirotubular suele ser la opción más económica y sencilla. La acuotubular es preferible para presiones y capacidades muy altas, vapor sobrecalentado o combustibles sólidos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hasta qué presión puede trabajar una caldera pirotubular?</summary>
+        <p>Según Bosch, los modelos pirotubulares de mayor tamaño alcanzan presiones de hasta unos 30 bar (435 psi). Por encima de ese rango, la tecnología habitual es la acuotubular.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Por qué una caldera acuotubular exige agua de mejor calidad?</summary>
+        <p>Porque contiene menos agua y sus tubos de diámetro pequeño reciben un flujo de calor intenso. Cualquier incrustación o depósito interno afecta con rapidez la transferencia de calor y puede sobrecalentar los tubos.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="article-callout" style="background:rgba(255,255,255,.08);border-left-color:var(--white);color:var(--white);text-align:left;max-width:700px;margin:0 auto 2rem;">La mejor caldera no es la más grande ni la más sofisticada. Es la que responde a la demanda real de su proceso durante toda su vida útil.</div>
+    <h2>Hable con nuestro equipo especializado en soluciones industriales de vapor</h2>
+    <p>+506 2257-6464</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Solicitar Asesoría Técnica</a>
+      <a href="https://api.whatsapp.com/send?phone=70100618" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#25d366;color:#25d366;"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 1.5rem 3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+  <a href="{{ url_for('blog_generacion_vapor') }}" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Artículo 2: Generación de Vapor</a>
+  <a href="{{ url_for('blog') }}" class="btn btn-outline"><i class="fa fa-book"></i> Volver a la Biblioteca de Vapor</a>
+</div>
+
+{% endblock %}
