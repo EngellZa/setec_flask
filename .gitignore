@@ -16,3 +16,6 @@ venv/
 .vscode/
 .idea/
 *.swp
+
+.venv_mac/
+.DS_Store
