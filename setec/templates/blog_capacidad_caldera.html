@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+{% block title %}Cómo calcular la capacidad de una caldera – Biblioteca de Vapor SETEC{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Cómo dimensionar una caldera de vapor: kg/h, BHP, demanda pico, presión y agua de alimentación. Método en seis pasos con un ejemplo resuelto." />
+<link rel="canonical" href="{{ request.url_root }}blog/como-calcular-la-capacidad-de-una-caldera/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Cuántos kg/h de vapor produce una caldera de 100 BHP?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Su capacidad nominal es de 1.565 kg/h (3.450 lb/h) «desde y a 100 °C (212 °F)». En operación real produce menos: por ejemplo, unos 1.452 kg/h (3.201 lb/h) a 7 bar g (102 psig) con agua de alimentación a 80 °C (176 °F)."}},
+    {"@type": "Question", "name": "¿Cuánto equivale un BHP?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Un caballo de caldera (BHP) equivale a evaporar 15,65 kg/h (34,5 lb/h) de agua «desde y a 100 °C (212 °F)», es decir, a 9,81 kW (33.475 BTU/h)."}},
+    {"@type": "Question", "name": "¿Se debe dimensionar la caldera con la suma de todos los equipos?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No. La suma de equipos casi siempre supera la demanda real, porque no todos operan a la vez ni a plena carga. La base del cálculo es la demanda pico simultánea, más las pérdidas y los consumos internos."}},
+    {"@type": "Question", "name": "¿Qué margen de seguridad conviene agregar?",
+     "acceptedAnswer": {"@type": "Answer", "text": "El que justifiquen el crecimiento previsto de la planta y la necesidad de respaldo. Agregar márgenes sin fundamento conduce a calderas sobredimensionadas que operan a carga baja y con menor eficiencia."}}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="product-hero product-hero--light">
+  <h1>¿Cómo Calcular la Capacidad de una Caldera? Kilogramos de Vapor por Hora, Presión y Demanda</h1>
+  <p>Un método en seis pasos para dimensionar una caldera de vapor a partir de la demanda real de su proceso, con un ejemplo resuelto y las equivalencias entre kg/h, BHP y kW.</p>
+</div>
+
+<section style="background:#fff;padding-bottom:0;">
+  <div class="container article-meta">
+    <p class="eyebrow">Biblioteca de Vapor SETEC · Artículo 4 · Dimensionamiento</p>
+    <p class="blog-meta">Equipo SETEC</p>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-04-capacidad-vapor-planta.jpg') }}" alt="Infografía de SETEC sobre cómo calcular la capacidad de vapor de una planta de proceso: cuatro pasos y ejemplos de demanda de vapor por industria" />
+    <figcaption>Cómo calcular la capacidad de vapor de una planta de proceso.</figcaption>
+  </div>
+
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>En los artículos anteriores de la Biblioteca de Vapor vimos <a href="{{ url_for('blog_fundamentos_calderas') }}">qué es una caldera industrial</a>, <a href="{{ url_for('blog_generacion_vapor') }}">cómo se genera el vapor</a> y <a href="{{ url_for('blog_pirotubulares_acuotubulares') }}">cómo elegir entre una caldera pirotubular y una acuotubular</a>. Una vez elegida la tecnología, queda la pregunta que más pesa en la inversión y en la operación: <strong>¿de qué tamaño debe ser la caldera?</strong></p>
+    <p>Es una pregunta que suele responderse con atajos: «la misma capacidad que la caldera anterior», «la suma de todos los equipos» o «un poco más, por si acaso». Cada atajo tiene un costo. Una caldera pequeña no sostiene la presión en los picos de demanda y entrega vapor húmedo. Una caldera sobredimensionada cuesta más, trabaja la mayor parte del tiempo a carga baja, enciende y apaga con frecuencia y pierde eficiencia.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>En qué unidades se expresa la capacidad de una caldera</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>La capacidad de una caldera de vapor se expresa como <strong>cantidad de vapor producido por unidad de tiempo</strong>, normalmente en kilogramos por hora (kg/h) o, en el sistema inglés, en libras por hora (lb/h). En Costa Rica también es muy común el <strong>caballo de caldera (BHP, boiler horsepower)</strong>, una unidad de origen estadounidense que equivale a evaporar 15,65 kg/h (34,5 lb/h) de agua «desde y a 100 °C (212 °F)», es decir, a 9,81 kW (33.475 BTU/h).</p>
+  </div>
+  <div class="container" style="max-width:900px;">
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>BHP</th>
+            <th>Vapor «desde y a 100 °C», kg/h</th>
+            <th>Vapor «from and at 212 °F», lb/h</th>
+            <th>Potencia, kW</th>
+            <th>Potencia, BTU/h</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>50</td><td>783</td><td>1.725</td><td>490</td><td>1.673.750</td></tr>
+          <tr><td>100</td><td>1.565</td><td>3.450</td><td>981</td><td>3.347.500</td></tr>
+          <tr><td>200</td><td>3.130</td><td>6.900</td><td>1.962</td><td>6.695.000</td></tr>
+          <tr><td>300</td><td>4.695</td><td>10.350</td><td>2.943</td><td>10.042.500</td></tr>
+          <tr><td>500</td><td>7.825</td><td>17.250</td><td>4.905</td><td>16.737.500</td></tr>
+          <tr><td>800</td><td>12.520</td><td>27.600</td><td>7.848</td><td>26.780.000</td></tr>
+          <tr><td>1.000</td><td>15.650</td><td>34.500</td><td>9.810</td><td>33.475.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--gray);font-style:italic;margin-top:.6rem;">1 BHP = 15,65 kg/h (34,5 lb/h) de vapor «desde y a 100 °C (212 °F)» = 9,81 kW (33.475 BTU/h). Es la capacidad nominal: la producción real depende de la presión y de la temperatura del agua de alimentación.</p>
+  </div>
+  <div class="container article-body">
+    <p>La expresión «desde y a 100 °C» es clave: indica que la capacidad nominal supone agua de alimentación a 100 °C que se convierte en vapor a presión atmosférica. En una planta real, el agua entra más fría y el vapor se genera a presión, así que <strong>la caldera produce menos vapor que su capacidad nominal</strong>. Lo veremos en el paso 4.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>El método en seis pasos</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-04-metodo-seis-pasos.png') }}" alt="Infografía de SETEC con los seis pasos para calcular la capacidad de una caldera: inventario de consumos, simultaneidad, pérdidas y consumos internos, condiciones reales, margen y respaldo, y selección" />
+    <figcaption>Método en seis pasos para calcular la capacidad de una caldera.</figcaption>
+  </div>
+
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <h3>Paso 1. Inventario de consumos</h3>
+    <p>El punto de partida es una lista de todos los equipos que consumen vapor, con su consumo en kg/h y la presión a la que lo necesitan. El dato puede obtenerse de tres fuentes, en este orden de preferencia:</p>
+    <ul>
+      <li><strong>Medición:</strong> un medidor de flujo de vapor en la línea del equipo o, en su defecto, del agua de alimentación de la caldera.</li>
+      <li><strong>Placa o ficha técnica del fabricante</strong> del equipo.</li>
+      <li><strong>Cálculo por balance de energía:</strong> el calor que necesita el producto dividido entre el calor latente del vapor a la presión de uso.</li>
+    </ul>
+    <p>El cálculo es sencillo. El consumo de vapor es igual a la masa del producto, por su calor específico, por el aumento de temperatura, dividido entre el tiempo y entre el calor latente del vapor. Por ejemplo, calentar 500 kg (1.102 lb) de un producto similar al agua de 20 °C a 90 °C (68 °F a 194 °F) en 30 minutos requiere unos 292.600 kJ/h (277.300 BTU/h). Con vapor a 3 bar g (44 psig), cuyo calor latente es de 2.133 kJ/kg (917 BTU/lb), el consumo es de unos 137 kg/h (302 lb/h). Los valores de calor latente están en la tabla de vapor del <a href="{{ url_for('blog_generacion_vapor') }}">artículo 2</a>.</p>
+    <p>Para el ejemplo de este artículo usaremos una planta de alimentos hipotética:</p>
+  </div>
+  <div class="container" style="max-width:900px;">
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Equipo</th>
+            <th>Presión de uso</th>
+            <th>Consumo de vapor</th>
+            <th>Origen del dato</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="white-space:normal;">Dos marmitas: 500 kg (1.102 lb) de producto cada una, de 20 °C a 90 °C (68 °F a 194 °F) en 30 minutos</td><td>3 bar g (44 psig)</td><td>274 kg/h (604 lb/h)</td><td>Cálculo (balance de energía)</td></tr>
+          <tr><td style="white-space:normal;">Calentador de agua para limpieza: 2.000 L/h (528 gal/h) de 20 °C a 80 °C (68 °F a 176 °F)</td><td>5 bar g (73 psig)</td><td>241 kg/h (531 lb/h)</td><td>Cálculo (balance de energía)</td></tr>
+          <tr><td>Pasteurizador</td><td>5 bar g (73 psig)</td><td>400 kg/h (882 lb/h)</td><td>Placa del fabricante</td></tr>
+          <tr><td>Autoclave</td><td>3 bar g (44 psig)</td><td>150 kg/h (331 lb/h)</td><td>Placa del fabricante</td></tr>
+          <tr><td>Lavado de equipos y áreas</td><td>3 bar g (44 psig)</td><td>100 kg/h (220 lb/h)</td><td>Estimación de la planta</td></tr>
+          <tr><td><strong>Suma de equipos conectados</strong></td><td></td><td><strong>1.165 kg/h (2.568 lb/h)</strong></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--gray);font-style:italic;margin-top:.6rem;">Planta de alimentos hipotética, con fines ilustrativos. Calor específico del producto asimilado al del agua: 4,18 kJ/(kg·°C) (1 BTU/(lb·°F)). Calor latente: 2.133 kJ/kg (917 BTU/lb) a 3 bar g y 2.085 kJ/kg (897 BTU/lb) a 5 bar g.</p>
+  </div>
+
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <h3>Paso 2. Simultaneidad y perfil de demanda</h3>
+    <p>La suma de todos los equipos, 1.165 kg/h (2.568 lb/h) en el ejemplo, casi nunca es la demanda real: los equipos no trabajan todos a la vez ni a plena carga. Lo que importa es la <strong>demanda pico simultánea</strong>, y la mejor forma de conocerla es construir el perfil de consumo a lo largo del día.</p>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-04-perfil-demanda.png') }}" alt="Gráfica de barras con el consumo horario de vapor de una planta: demanda pico de 1.000 kg/h (2.205 lb/h) y demanda promedio de 567 kg/h (1.249 lb/h)" />
+    <figcaption>Perfil de demanda de una planta (ejemplo ilustrativo): el pico, no el promedio, define la capacidad.</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>En el ejemplo, el pico es de 1.000 kg/h (2.205 lb/h) y ocurre al arranque del turno, cuando se calientan los equipos. El promedio diario es de apenas 567 kg/h (1.249 lb/h), y por la noche la planta consume 300 kg/h (661 lb/h). Dimensionar con el promedio dejaría a la planta sin vapor en el arranque; dimensionar con la suma de equipos sobredimensionaría la caldera. <strong>La base del cálculo es el pico real.</strong></p>
+    <p>En una planta existente, el perfil puede medirse con un medidor de vapor o estimarse a partir del consumo de combustible. En una planta nueva, se construye con la secuencia de operación de cada equipo.</p>
+
+    <h3>Paso 3. Pérdidas y consumos internos</h3>
+    <p>La caldera no solo alimenta al proceso. También debe cubrir las pérdidas de la red de distribución, las purgas y, cuando existe, el vapor que consume el desaireador para calentar el agua de alimentación. Este margen debe estimarse en cada instalación; en el ejemplo supondremos un 10 %:</p>
+    <ul>
+      <li>1.000 kg/h × 1,10 = <strong>1.100 kg/h (2.425 lb/h)</strong> de vapor que la caldera debe entregar en el pico.</li>
+    </ul>
+
+    <h3>Paso 4. Corregir por las condiciones reales de operación</h3>
+    <p>Aquí aparece el detalle que más se olvida. Como la capacidad nominal se expresa «desde y a 100 °C», la caldera produce menos vapor cuando trabaja a presión y con agua de alimentación más fría. La producción real se obtiene multiplicando la capacidad nominal por un <strong>factor de evaporación</strong>: el calor latente a 100 °C dividido entre la energía que realmente hay que entregar a cada kilogramo de agua.</p>
+  </div>
+  <div class="container article-figure" style="max-width:820px;">
+    <img src="{{ url_for('static', filename='img/biblioteca_vapor/articulo-04-capacidad-real.png') }}" alt="Gráfica de la capacidad real de una caldera como porcentaje de su capacidad nominal según la temperatura del agua de alimentación, a 0, 7 y 10 bar g" />
+    <figcaption>Capacidad real frente a capacidad nominal según la presión y la temperatura del agua de alimentación.</figcaption>
+  </div>
+  <div class="container article-body" style="margin-top:1.5rem;">
+    <p>Con vapor a 7 bar g (102 psig) y agua de alimentación a 80 °C (176 °F), cada kilogramo necesita 2.433 kJ (1.046 BTU por libra), frente a los 2.257 kJ/kg (970 BTU/lb) de la condición nominal. El factor es de 0,928: <strong>la caldera entrega el 92,8 % de su capacidad nominal.</strong> Con agua de alimentación a 20 °C (68 °F), el factor bajaría a 0,84. Por eso el retorno de condensado y el economizador, que elevan la temperatura del agua de alimentación, también aumentan la capacidad efectiva de la caldera.</p>
+    <p>En el ejemplo, la capacidad nominal necesaria es:</p>
+    <ul>
+      <li>1.100 kg/h ÷ 0,928 = <strong>1.185 kg/h (2.613 lb/h) «desde y a 100 °C»</strong>, equivalentes a <strong>75,7 BHP</strong>.</li>
+    </ul>
+
+    <h3>Paso 5. Margen de crecimiento y respaldo</h3>
+    <p>El margen no debe ser un «por si acaso» sin fundamento. Debe responder a dos preguntas concretas:</p>
+    <ul>
+      <li><strong>¿Cuánto crecerá la demanda?</strong> Nuevas líneas, más turnos o equipos previstos en el plan de la planta. En el ejemplo, la empresa prevé un crecimiento del 20 %: 1.185 kg/h × 1,20 = 1.422 kg/h (3.135 lb/h), es decir, 90,9 BHP.</li>
+      <li><strong>¿Qué pasa si la caldera se detiene?</strong> En procesos críticos, como hospitales, esterilización o producción continua, conviene evaluar una configuración con respaldo (N+1): dos o más calderas, de modo que una pueda salir de servicio para mantenimiento sin detener la planta.</li>
+    </ul>
+
+    <h3>Paso 6. Selección de la caldera</h3>
+    <p>Con 90,9 BHP de capacidad requerida, la selección natural sería una caldera de <strong>100 BHP</strong>: 1.565 kg/h (3.450 lb/h) nominales, que en las condiciones reales de la planta entregan unos 1.452 kg/h (3.201 lb/h).</p>
+    <p>Pero falta revisar la carga mínima. Por la noche, la planta consume 300 kg/h (661 lb/h), apenas el 21 % de la capacidad real de esa caldera. Si el quemador no modula hasta ese nivel, la caldera encenderá y apagará constantemente, con más desgaste y menos eficiencia. Hay dos caminos:</p>
+    <ul>
+      <li><strong>Una caldera de 100 BHP</strong> con un quemador de amplio rango de modulación (relación de modulación de al menos 5:1).</li>
+      <li><strong>Dos calderas de 60 BHP</strong>, cada una con 871 kg/h (1.920 lb/h) de capacidad real. Por la noche trabaja una sola, al 34 % de su capacidad; en el pico trabajan ambas; y si una sale de servicio, la otra sostiene la carga nocturna y buena parte de la diurna.</li>
+    </ul>
+    <p>La decisión depende del costo de inversión, del espacio, de la criticidad del proceso y del costo de una parada. Lo importante es que se tome con números, no por costumbre.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Y si la planta ya está en operación?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Cuando se va a reemplazar o ampliar una caldera existente, la planta tiene una ventaja: puede medir. Las fuentes de información más útiles son:</p>
+    <ul>
+      <li><strong>Medidores de flujo de vapor o de agua de alimentación</strong>, idealmente con registro horario durante varias semanas.</li>
+      <li><strong>El consumo de combustible.</strong> La producción de vapor puede estimarse como el combustible consumido, por su poder calorífico, por la eficiencia de la caldera, dividido entre la energía que necesita cada kilogramo de vapor. Por ejemplo, 100 L/h (26,4 gal/h) de diésel, con un poder calorífico aproximado de 35,8 MJ/L (128.400 BTU/gal) y una eficiencia supuesta del 85 %, a 7 bar g (102 psig) y con agua a 80 °C (176 °F), equivalen a unos 1.250 kg/h (2.758 lb/h) de vapor.</li>
+      <li><strong>El comportamiento de la caldera actual:</strong> caídas de presión en los picos, arranques y paradas frecuentes del quemador u horas de operación a carga baja.</li>
+    </ul>
+    <p>Una advertencia: copiar la capacidad de la caldera anterior repite sus errores. Si estaba sobredimensionada, o si la planta cambió desde que se instaló, el reemplazo es el momento de corregirlo.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>Errores frecuentes al dimensionar una caldera</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <ul>
+      <li>Sumar la capacidad de todos los equipos sin analizar la simultaneidad.</li>
+      <li>Dimensionar con el consumo promedio en lugar del pico.</li>
+      <li>Olvidar que la capacidad nominal es «desde y a 100 °C» y no corregir por presión y temperatura del agua de alimentación.</li>
+      <li>Agregar márgenes sucesivos «por si acaso» en cada paso, que acumulados duplican la capacidad necesaria.</li>
+      <li>No revisar la carga mínima ni el rango de modulación del quemador.</li>
+      <li>No considerar el respaldo en procesos que no pueden detenerse.</li>
+    </ul>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Qué viene después?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>Con la capacidad definida, la siguiente pregunta es económica. En el próximo artículo de la <strong>Biblioteca de Vapor SETEC</strong> responderemos <strong>cuánto cuesta realmente generar vapor</strong>: combustible, eficiencia y costo por tonelada de vapor.</p>
+    <p>Si aún no los ha leído, le recomendamos los artículos anteriores: <a href="{{ url_for('blog_fundamentos_calderas') }}">Calderas industriales: qué son y cómo funcionan</a>, <a href="{{ url_for('blog_generacion_vapor') }}">¿Cómo se genera el vapor industrial?</a> y <a href="{{ url_for('blog_pirotubulares_acuotubulares') }}">Calderas pirotubulares vs. acuotubulares</a>.</p>
+  </div>
+
+  <div class="container" style="margin-top:1rem;">
+    <div class="section-header">
+      <h2>¿Necesita dimensionar una caldera nueva o revisar la actual?</h2>
+      <div class="gold-bar"></div>
+    </div>
+  </div>
+  <div class="container article-body">
+    <p>SETEC, empresa costarricense fundada en 1954 y especializada en <a href="{{ url_for('sistemas_vapor') }}">sistemas de vapor y agua caliente</a>, puede ayudarle a levantar el inventario de consumos de su planta, analizar su perfil de demanda y definir la capacidad y la configuración de calderas que su proceso realmente necesita.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--light2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuántos kg/h de vapor produce una caldera de 100 BHP?</summary>
+        <p>Su capacidad nominal es de 1.565 kg/h (3.450 lb/h) «desde y a 100 °C (212 °F)». En operación real produce menos: por ejemplo, unos 1.452 kg/h (3.201 lb/h) a 7 bar g (102 psig) con agua de alimentación a 80 °C (176 °F).</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto equivale un BHP?</summary>
+        <p>Un caballo de caldera (BHP) equivale a evaporar 15,65 kg/h (34,5 lb/h) de agua «desde y a 100 °C (212 °F)», es decir, a 9,81 kW (33.475 BTU/h).</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Se debe dimensionar la caldera con la suma de todos los equipos?</summary>
+        <p>No. La suma de equipos casi siempre supera la demanda real, porque no todos operan a la vez ni a plena carga. La base del cálculo es la demanda pico simultánea, más las pérdidas y los consumos internos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué margen de seguridad conviene agregar?</summary>
+        <p>El que justifiquen el crecimiento previsto de la planta y la necesidad de respaldo. Agregar márgenes sin fundamento conduce a calderas sobredimensionadas que operan a carga baja y con menor eficiencia.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="article-callout" style="background:rgba(255,255,255,.08);border-left-color:var(--white);color:var(--white);text-align:left;max-width:700px;margin:0 auto 2rem;">Una caldera bien dimensionada no es la más grande. Es la que cubre el pico real, trabaja eficientemente en la carga mínima y deja espacio para crecer.</div>
+    <h2>Hable con nuestro equipo especializado en soluciones industriales de vapor</h2>
+    <p>+506 2257-6464</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary">Solicitar Asesoría Técnica</a>
+      <a href="https://api.whatsapp.com/send?phone=70100618" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#25d366;color:#25d366;"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 1.5rem 3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+  <a href="{{ url_for('blog_pirotubulares_acuotubulares') }}" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Artículo 3: Pirotubulares vs. Acuotubulares</a>
+  <a href="{{ url_for('blog') }}" class="btn btn-outline"><i class="fa fa-book"></i> Volver a la Biblioteca de Vapor</a>
+</div>
+
+{% endblock %}

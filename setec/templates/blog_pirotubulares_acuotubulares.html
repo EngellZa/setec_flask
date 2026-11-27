@@ -180,7 +180,7 @@
     </div>
   </div>
   <div class="container article-body">
-    <p>Una vez elegida la tecnología, la siguiente pregunta es qué capacidad de caldera necesita su planta. En el próximo artículo de la <strong>Biblioteca de Vapor SETEC</strong> explicaremos <strong>cómo calcular la capacidad de una caldera</strong>: kilogramos de vapor por hora, presión de operación y perfil de demanda.</p>
+    <p>Una vez elegida la tecnología, la siguiente pregunta es qué capacidad de caldera necesita su planta. En el próximo artículo de la <strong>Biblioteca de Vapor SETEC</strong> explicaremos <a href="{{ url_for('blog_capacidad_caldera') }}"><strong>cómo calcular la capacidad de una caldera</strong></a>: kilogramos de vapor por hora, presión de operación y perfil de demanda.</p>
     <p>Si aún no los ha leído, le recomendamos los artículos anteriores: <a href="{{ url_for('blog_fundamentos_calderas') }}">Calderas industriales: qué son, cómo funcionan y por qué son clave para la eficiencia de una planta</a> y <a href="{{ url_for('blog_generacion_vapor') }}">¿Cómo se genera el vapor industrial?</a>.</p>
   </div>
 
@@ -239,6 +239,7 @@
 <div style="text-align:center;padding:2rem 1.5rem 3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
   <a href="{{ url_for('blog_generacion_vapor') }}" class="btn btn-outline"><i class="fa fa-arrow-left"></i> Artículo 2: Generación de Vapor</a>
   <a href="{{ url_for('blog') }}" class="btn btn-outline"><i class="fa fa-book"></i> Volver a la Biblioteca de Vapor</a>
+  <a href="{{ url_for('blog_capacidad_caldera') }}" class="btn btn-outline">Artículo 4: Capacidad de una Caldera <i class="fa fa-arrow-right"></i></a>
 </div>
 
 {% endblock %}
